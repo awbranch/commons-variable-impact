@@ -84,13 +84,6 @@ export default function Home({ variables, measures, sections }) {
   )
 }
 
-/**
- * If all the variables the measure depends on are available, then the measure is available
- */
-const isAvailable = (measure, varAvail) => {
-  return !measure.variables.find(v => !varAvail[v])
-}
-
 const CheckBox = ({id, checked, onChange}) => {
   return (
     <div className={styles.variable}>
@@ -111,13 +104,7 @@ const MeasureSection = ({section, varAvail, measures}) => {
     contents = (
     <div>
       <h2>{section.name}</h2>
-      <div
-        className={classNames(
-          styles.dataBlock,
-          isAvailable(measures.find(m => m.id === section.measure), varAvail) ? styles.available: styles.unavailable
-        )}>
-        {section.measure}
-      </div>
+      <MeasureBlock measures={measures} measureId={section.measure} varAvail={varAvail} />
     </div>
     )
   } else {
@@ -127,18 +114,9 @@ const MeasureSection = ({section, varAvail, measures}) => {
         {
           section.columns.map((c, i) => (
             <div key={i} className={styles.sectionColumn}>
-              {/*<div className={styles.sectionColumnHeader}>{c.name}</div>*/}
               {
-                c.measures.map((measure, i) => (
-                  <div
-                    key={i}
-                    className={classNames(
-                      styles.sectionCell,
-                      styles.dataBlock,
-                      isAvailable(measures.find(m => m.id === measure), varAvail) ? styles.available: styles.unavailable
-                    )}>
-                    {measure}
-                  </div>
+                c.measures.map(measureId => (
+                  <MeasureBlock className={styles.sectionCell} measures={measures} measureId={measureId} varAvail={varAvail}/>
                 ))
               }
             </div>
@@ -150,6 +128,36 @@ const MeasureSection = ({section, varAvail, measures}) => {
 
   return <div className={styles.section}>{contents}</div>
 }
+
+const MeasureBlock = ({className, measures, measureId, varAvail}) => {
+  let measure = measures.find(m => m.id === measureId)
+
+  // If one variable isn't availalbe, the measure isn't available
+  const measureAvailable = !measure.variables.find(v => !varAvail[v])
+
+  return (
+    <div
+      className={classNames(
+        className,
+        styles.dataBlock,
+        measureAvailable ? styles.available: styles.unavailable
+      )}>
+      <div className={styles.measureTitle}>
+        {measure.id}: {measure.name}
+      </div>
+      <div className={styles.measureVariableList}>
+        {
+          measure.variables.map((v, i) => (
+            <span key={i} className={classNames({[styles.measureVariableUnavailable]: !varAvail[v]})}>
+              {`${i > 0 ? ', ': ''}${v}`}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+  )
+}
+
 
 export async function getStaticProps() {
   const dateStages = {
@@ -255,10 +263,7 @@ export async function getStaticProps() {
     })
   })
 
-  // Load the defaults from Yolo Codebook Variable Progress
-
   // Add Annual Measure Variables
-
   // Add explore view measures section (by measure group)
   // Add dependencies between variables
 

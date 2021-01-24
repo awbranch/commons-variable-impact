@@ -60,7 +60,7 @@
 }
 
 .available {
-  background: #9DC285;
+  background: #c1e6a9;
 }
 
 .atRisk {
@@ -68,7 +68,7 @@
 }
 
 .unavailable {
-  background: #D16D6A;
+  background: #ff9895;
 }
 
 .buttonBar {
@@ -76,4 +76,16 @@
   button {
     margin-right: 0.5rem;
   }
+}
+
+.measureTitle {
+  text-transform: uppercase;
+}
+
+.measureVariableList {
+  margin-top: 0.3rem;
+}
+
+.measureVariableUnavailable {
+  font-weight: 800;
 }
