@@ -1,32 +1,31 @@
-.container {
-  padding: 2rem 5rem;
-  margin: 0 auto;
-  //max-width: 90rem;
-}
-
 .columns {
   display: flex;
   flex-direction: row;
 }
 
 .variables {
-  margin-right: 1rem;
+  padding: 0.5rem 0.5rem;
+  height: 100vh;
+  overflow-y: scroll;
+  min-width: 18rem;
 }
 
+.impact {
+  padding: 1rem 3rem;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+}
+
+
 .variableList {
-  margin-top: 2rem;
-  //overflow-y: scroll;
-  //height: 80vh;
+  margin: 1rem 0 2rem 0;
 }
 
 .variable {
   margin-top: 0.5rem;
   margin-right: 1rem;
   white-space: nowrap;
-}
-
-.impact {
-  width: 100%
 }
 
 .section {
@@ -40,7 +39,7 @@
 }
 
 .sectionColumn {
-  //border: 1px solid green;
+  flex:1;
   flex-grow: 1;
 }
 
@@ -50,40 +49,41 @@
 }
 
 .sectionCell {
-  //border: 1px solid orange;
 }
 
 .dataBlock {
   padding: 0.3rem;
   margin: 1px 1px 1px 0;
-  font-size: 6pt;
+  font-size: 8pt;
 }
 
 .available {
-  background: #c1e6a9;
+  //background: #aadbc2;
+  background: #eeeeee;
 }
 
 .atRisk {
-  background: #F9DA78;
+  background: #fbe4a3;
 }
 
 .unavailable {
-  background: #ff9895;
+  background: #f0b9b6;
 }
 
 .buttonBar {
   margin-top: 1rem;
   button {
-    margin-right: 0.5rem;
+    margin: 0.3rem;
   }
 }
 
 .measureTitle {
-  text-transform: uppercase;
+  //text-transform: uppercase;
 }
 
 .measureVariableList {
   margin-top: 0.3rem;
+  font-size: 6pt;
 }
 
 .measureVariableUnavailable {

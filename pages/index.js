@@ -45,25 +45,24 @@ export default function Home({ variables, measures, sections }) {
   }
 
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Commons Variable Impact Analyzer</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <main>
-        <h1>Commons Variable Impact Analyzer</h1>
-        <p>Missing variables are highlighted in bold.</p>
-
-        <div className={styles.buttonBar}>
-          <button onClick={selectAll}>Select All</button>
-          <button onClick={selectNone}>Select None</button>
-          <button onClick={resetVars}>Reset</button>
-        </div>
-
         <div className={styles.columns}>
 
           <div className={styles.variables}>
+
+            <div className={styles.buttonBar}>
+              <button onClick={selectAll}>All</button>
+              <button onClick={selectNone}>None</button>
+              <button onClick={resetVars}>Reset</button>
+            </div>
+
+
             <div className={styles.variableList}>
               {
                 Object.keys(varAvail).map(k =>
@@ -73,6 +72,8 @@ export default function Home({ variables, measures, sections }) {
             </div>
           </div>
           <div className={styles.impact}>
+            <h1>Commons Variable Impact Analyzer</h1>
+            <div><i>Missing sections highlighted in red and missing variables are bold.</i></div>
             {
               sections.map((s,i) =>
                 <MeasureSection key={i} section={s} varAvail={varAvail} measures={measures}/>
