@@ -53,6 +53,7 @@ export default function Home({ variables, measures, sections }) {
 
       <main>
         <h1>Commons Variable Impact Analyzer</h1>
+        <p>Missing variables are highlighted in bold.</p>
 
         <div className={styles.buttonBar}>
           <button onClick={selectAll}>Select All</button>
@@ -116,7 +117,7 @@ const MeasureSection = ({section, varAvail, measures}) => {
             <div key={i} className={styles.sectionColumn}>
               {
                 c.measures.map(measureId => (
-                  <MeasureBlock className={styles.sectionCell} measures={measures} measureId={measureId} varAvail={varAvail}/>
+                  <MeasureBlock key={measureId} className={styles.sectionCell} measures={measures} measureId={measureId} varAvail={varAvail}/>
                 ))
               }
             </div>
