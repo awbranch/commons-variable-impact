@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.scss'
 import classNames from 'classnames'
 import path from 'path'
 import csv from 'csvtojson'
-import { parseVariablesFromExp, unique } from '../src/utils.js'
+import { unique, parseVariablesFromExp, parseMeasureGroups} from '../src/utils.js'
 
 // List of filters and the variables they depend on
 const FILTERS = []
@@ -102,15 +102,22 @@ const CheckBox = ({id, checked, onChange}) => {
 const MeasureSection = ({section, varAvail, measures}) => {
   let contents
 
-  if(section.measure) {
+  if(section.measures) {
     contents = (
     <div>
       <h2>{section.name}</h2>
-      <MeasureBlock measures={measures} measureId={section.measure} varAvail={varAvail} />
+      {
+        section.measures.map(measureId => (
+          <MeasureBlock
+            key={measureId}
+            measure={measures.find(m => m.id === measureId)}
+            varAvail={varAvail}
+          />
+        ))
+      }
     </div>
     )
   } else {
-
     contents = (
       <div className={styles.sectionTable}>
         {
@@ -118,7 +125,12 @@ const MeasureSection = ({section, varAvail, measures}) => {
             <div key={i} className={styles.sectionColumn}>
               {
                 c.measures.map(measureId => (
-                  <MeasureBlock key={measureId} className={styles.sectionCell} measures={measures} measureId={measureId} varAvail={varAvail}/>
+                  <MeasureBlock
+                    key={measureId}
+                    className={styles.sectionCell}
+                    measure={measures.find(m => m.id === measureId)}
+                    varAvail={varAvail}
+                  />
                 ))
               }
             </div>
@@ -131,9 +143,7 @@ const MeasureSection = ({section, varAvail, measures}) => {
   return <div className={styles.section}>{contents}</div>
 }
 
-const MeasureBlock = ({className, measures, measureId, varAvail}) => {
-  let measure = measures.find(m => m.id === measureId)
-
+const MeasureBlock = ({className, measure, varAvail}) => {
   // If one variable isn't availalbe, the measure isn't available
   const measureAvailable = !measure.variables.find(v => !varAvail[v])
 
@@ -160,89 +170,139 @@ const MeasureBlock = ({className, measures, measureId, varAvail}) => {
   )
 }
 
+const DATE_STAGE = {
+  'Referral':    'RfrrlDt',
+  'Filing':      'FilingDt',
+  'Disposition': 'DispoDt',
+  'Deferred Prosecution or Pretrial Diversion': 'DfrrlOrdrDt',
+  'Arraignment': 'DfrrlOrdrDt',
+  'Arrest':      'ArrstDt',
+  'Sentence':    'SntncDt'
+}
 
 export async function getStaticProps() {
-  const dateStages = {
-    'Referral': 'RfrrlDt',
-    'Filing':  'FilingDt',
-    'Disposition': 'DispoDt',
-    'Deferred Prosecution or Pretrial Diversion': 'DfrrlOrdrDt',
-    'Arraignment': 'DfrrlOrdrDt',
-    'Arrest': 'ArrstDt',
-    'Sentence': 'SntncDt'
-  }
 
-  const codebookData = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Codebook.csv'))
-  const measureData = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Measures.csv'))
-  const caseflowSectionData = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Caseflow Sections.csv'))
+  const codebook = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Codebook.csv'))
   const variableProgress  = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo Codebook Variable Progress - Variables.csv'))
 
-  // Remove empty entries from the codebook data
-  const codebook = codebookData.map(v => v.Variable).filter(v => v.length !== 0)
+  const measureData = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Measures.csv'))
+  const caseflowSectionData = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Caseflow Sections.csv'))
 
-  // Collect the measures,
+  // Create a master map of variables
+  const variables = codebook.reduce((a, v) => {
+    let name = v['Variable']
+    if(name.length > 0) {
+      a[name] = {
+        name: name,
+        status: '',
+        priority: '',
+        dependsOn: []
+      }
+    }
+    return a
+  }, {})
+
+  // Add the progress to each variable
+  variableProgress.forEach(p => {
+    let name = p['Variable']
+    let v = variables[name]
+    if(!v) {
+      console.error(`Progress Variable: ${name} not found in codebook`)
+    } else {
+      v.status = p['Status*']
+      v.priority = p['Priority']
+
+      let dependsOn  = [...(p['Depends On Variable'].split(',').map(v => v.trim()))]
+      dependsOn.forEach(d => {
+        if(d.length > 0) {
+          if(!variables[d]) {
+            console.error(`Progress Variable: ${name} depends on variable ${d} not found in codebook`)
+          } else {
+            v.dependsOn.push(d)
+          }
+
+        }
+      })
+    }
+  })
+
   const measures = measureData.map(m => {
+
+    let measureId = parseInt(m['DB ID'])
+    let measureName = m['Measure Title']
+    let measureGroups = parseMeasureGroups(m['Groups'])
+    let relatedMeasures = m['Related Measures - CTP'].trim().split(',').map(s => parseInt(s))
+
+    // Parse all the variables form the various measure expressions
     let measureVars = [
       ...parseVariablesFromExp(m['Variable - CTP']),
       ...parseVariablesFromExp(m['Expression 1 - CTP']),
       ...parseVariablesFromExp(m['Expression 2 - CTP']),
       ...parseVariablesFromExp(m['Unknown Expression 1 - CTP']),
       ...parseVariablesFromExp(m['Unknown Expression 2 - CTP']),
+      // TODO: are there other variables the measure depends on in the master sheet?
     ]
 
-    if(dateStages[m['Date Stage - CTP']]) {
-      measureVars.push(dateStages[m['Date Stage - CTP']])
+    // Get any variables based on the date stage
+    if(DATE_STAGE[m['Date Stage - CTP']]) {
+      measureVars.push(DATE_STAGE[m['Date Stage - CTP']])
     }
 
-    measureVars = unique(measureVars).sort()
+    // Remove duplicates
+    measureVars = unique(measureVars)
 
-    // Make sure all the codebook variables exist in the codebook
-    measureVars = measureVars.filter(mv => {
-      if(!codebook.find(v => v === mv)) {
-        // Warn when they don't
-        console.error(`Measure: ${m['DB ID']} - ${m['Measure Title']} contains a calculation with unknown variable: ${mv}`)
+    // Make sure all the measureVariables are valid
+    measureVars = measureVars.filter(v => {
+      if(!variables[v]) {
+        console.error(`Measure: ${measureId}: ${measureName} contains a calculation with unknown variable: ${v}`)
         return false
       }
       return true
     })
 
+    // A measure may have a variable that depends on another variable, if so, add that other variable to the measures vars
+    let dependantVars = []
+    measureVars.forEach(mv => {
+      dependantVars.push(...variables[mv].dependsOn)
+    })
+
+    // Add all the dependancies to the measure vars
+    if(dependantVars.length > 0) {
+      measureVars.push(...dependantVars)
+    }
+
+    // Remove duplicates again and sort
+    measureVars = unique(measureVars).sort()
+
     return {
-      id: parseInt(m['DB ID']),
-      name: m['Measure Title'],
-      variables: measureVars
+      id: measureId,
+      name: measureName,
+      variables: measureVars,
+      measureGroups: measureGroups,
+      relatedMeasures: relatedMeasures
     }
   })
 
-  // Remove all the variables that aren't referenced and turn variables into an array of objects
-  const variables = codebook
-    .filter(v =>
-      measures.find(m => m.variables.find(mv => mv === v))
-    )
-    .sort()
-    .map(v => ({name: v, priority: 4, status: 'Done'}))
+  // Remove all variables that aren't referenced in by the measures
+  const variableList = Object.values(variables)
+    .filter(v => {
+    // // If it has any status or is referenced by the measures, keep it
+    return v.priority.length > 0 || (measures.find(m => m.variables.find(mv => mv === v.name)))
+  }).sort((a, b) => a.name.localeCompare(b.name))
 
-  // Set each variables priority and status from variableProgress
-  variables.forEach(v => {
-    let p = variableProgress.find(p => p.Variable === v.name)
-    if(p) {
-      v.status = p['Status*']
-      v.priority = p['Priority']
-    }
-  })
-
-  const sections = []
+ const sections = []
 
   // Add the goals measure, this comes from directus, we'll just hardcode the id here
   sections.push({
     name: 'Prosecutor Goal',
-    measure: 656
+    measures: [656]
   })
 
   // Add the caseflow sections
   caseflowSectionData.forEach(s => {
     sections.push({
       name: 'Monthly Caseflow: ' + s['Name'].trim(),
-      measure: parseInt(s['Measure'].trim())
+      measures: [parseInt(s['Measure'].trim())]
     })
 
     sections.push({
@@ -265,11 +325,35 @@ export async function getStaticProps() {
     })
   })
 
-  // Add Annual Measure Variables
-  // Add explore view measures section (by measure group)
-  // Add dependencies between variables
+  // Add the annual measures
+  let annualMeasures = measures
+    .filter(m => m.measureGroups.find(g => g.type === 'Performance' && g.group === 'Primary'))
+    .sort((a, b) => (a.id - b.id))
+
+  sections.push({
+    name: 'Annual Measures',
+    measures: annualMeasures.map(m => m.id)
+  })
+
+  sections.push({
+    name: 'Other Annual Measure Companions',
+    measures: measures
+      .filter(m =>
+        m.measureGroups.find(g => g.type === 'Performance' && g.group === 'Companion') &&
+        annualMeasures.find(a => a.relatedMeasures.find(r => r === m.id))
+      )
+      .sort((a, b) => (a.id - b.id))
+      .map(m => m.id)
+  })
+
+  // Handle @ variables like  @TotDrgHybridCrts in - 118	Performance, Companion: 18	Drug Courts
 
   // Add filters
+  // Add explore view measures section (by measure group)
+
+  // Add more columns to the checkboxes: Status, Missing, Priority
+  // Allow sorting of each column
+
   // Initialize checkboxes with those already done variables as a starting place
   // Within each group
   //    Add the measure id: name
@@ -280,10 +364,9 @@ export async function getStaticProps() {
   // Checkboxes add
   //    Sort/Group: Alpha, Priority (from Variable Progress)
 
-
   return {
     props: {
-      variables,
+      variables: variableList,
       measures,
       sections
     }

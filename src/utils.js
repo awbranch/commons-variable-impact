@@ -1,4 +1,3 @@
-//
 export const parseVariablesFromExp = (exp) => {
   exp = exp.trim()
   if(exp.length === 0) {
@@ -14,14 +13,32 @@ export const parseVariablesFromExp = (exp) => {
   return unique(vars)
 }
 
-//
 export const unique = (arr) => {
   return [...(new Set(arr))]
 }
 
-// console.log(parseVariablesFromExp('Prosecuted AND CaseStatus=1 AND TopFilingChrgOffns>4 AND TopFilingChrgOffns<777 AND TopFilingChrgFelMisd=1 AND FelDispo180=1 AND Prosecuted=1 AND CaseStatus=1 AND Cnvctd=1 AND (TopSntnc>1 AND TopSntnc<10) AND ReArrstFlag>-777'))
-// console.log(parseVariablesFromExp('measure:909'))
-// console.log(parseVariablesFromExp(''))
-// console.log(parseVariablesFromExp('CaseDisposition > 0 AND TopFilingChrgFelMisd=1'))
-// console.log(parseVariablesFromExp('((AA=BB) OR (CC < DD))'))
-// console.log(parseVariablesFromExp('TopRfrrdChrgFelMisd'))
+export const parseMeasureGroups = (text) => {
+
+  const groups = []
+  const parts = text.trim().split('\n')
+  parts.forEach(p => {
+    const found = p.match(/([\w\s]+),\s*([\w\s]+)\s*:?\s*(\d*)/)
+    if(!found) {
+      console.log(`Unable to parse measure group: ${text}`)
+    } else {
+
+      let group = {
+        type: found[1],
+        group: found[2]
+      }
+
+      if(found[3] !== undefined && found[3].length > 0) {
+        group.order = parseInt(found[3])
+      }
+      groups.push(group)
+    }
+  })
+
+  return groups
+}
+
