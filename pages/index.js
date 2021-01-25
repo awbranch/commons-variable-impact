@@ -6,10 +6,7 @@ import path from 'path'
 import csv from 'csvtojson'
 import { unique, parseVariablesFromExp, parseMeasureGroups} from '../src/utils.js'
 
-// List of filters and the variables they depend on
-const FILTERS = []
-
-export default function Home({ variables, measures, sections }) {
+export default function Home({ variables, sections }) {
 
   const [varAvail, setVarAvail] = useState(variables.reduce((a, v) => {
     a[v.name] = (v.status === 'Done' || v.status === 'Fixup')
@@ -76,7 +73,7 @@ export default function Home({ variables, measures, sections }) {
             <div><i>Missing sections highlighted in red and missing variables are bold.</i></div>
             {
               sections.map((s,i) =>
-                <MeasureSection key={i} section={s} varAvail={varAvail} measures={measures}/>
+                <MeasureSection key={i} section={s} varAvail={varAvail}/>
               )
             }
           </div>
@@ -99,7 +96,7 @@ const CheckBox = ({id, checked, onChange}) => {
   )
 }
 
-const MeasureSection = ({section, varAvail, measures}) => {
+const MeasureSection = ({section, varAvail}) => {
   let contents
 
   if(section.measures) {
@@ -107,33 +104,48 @@ const MeasureSection = ({section, varAvail, measures}) => {
     <div>
       <h2>{section.name}</h2>
       {
-        section.measures.map(measureId => (
+        section.measures.map(measure => (
           <MeasureBlock
-            key={measureId}
-            measure={measures.find(m => m.id === measureId)}
+            key={measure.id}
+            measure={measure}
             varAvail={varAvail}
           />
         ))
       }
     </div>
     )
-  } else {
+  } else if(section.columns) {
     contents = (
       <div className={styles.sectionTable}>
         {
           section.columns.map((c, i) => (
             <div key={i} className={styles.sectionColumn}>
               {
-                c.measures.map(measureId => (
+                c.measures.map(measure => (
                   <MeasureBlock
-                    key={measureId}
+                    key={measure.id}
                     className={styles.sectionCell}
-                    measure={measures.find(m => m.id === measureId)}
+                    measure={measure}
                     varAvail={varAvail}
                   />
                 ))
               }
             </div>
+          ))
+        }
+      </div>
+    )
+  } else if(section.filterSubclasses) {
+    contents = (
+      <div>
+        <h2>{section.name}</h2>
+        {
+          section.filterSubclasses.map(filterSubclass => (
+            <FilterBlock
+              key={filterSubclass.id}
+              filterSubclass={filterSubclass}
+              varAvail={varAvail}
+            />
           ))
         }
       </div>
@@ -144,7 +156,7 @@ const MeasureSection = ({section, varAvail, measures}) => {
 }
 
 const MeasureBlock = ({className, measure, varAvail}) => {
-  // If one variable isn't availalbe, the measure isn't available
+  // If one variable isn't available, the measure isn't available
   const measureAvailable = !measure.variables.find(v => !varAvail[v])
 
   return (
@@ -154,13 +166,40 @@ const MeasureBlock = ({className, measure, varAvail}) => {
         styles.dataBlock,
         measureAvailable ? styles.available: styles.unavailable
       )}>
-      <div className={styles.measureTitle}>
+      <div className={styles.blockTitle}>
         {measure.id}: {measure.name}
       </div>
-      <div className={styles.measureVariableList}>
+      <div className={styles.blockVariableList}>
         {
           measure.variables.map((v, i) => (
-            <span key={i} className={classNames({[styles.measureVariableUnavailable]: !varAvail[v]})}>
+            <span key={i} className={classNames({[styles.blockVariableUnavailable]: !varAvail[v]})}>
+              {`${i > 0 ? ', ': ''}${v}`}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+  )
+}
+
+const FilterBlock = ({className, filterSubclass, varAvail}) => {
+  // If one variable isn't available, the filter isn't available
+  const available = !filterSubclass.variables.find(v => !varAvail[v])
+
+  return (
+    <div
+      className={classNames(
+        className,
+        styles.dataBlock,
+        available ? styles.available: styles.unavailable
+      )}>
+      <div className={styles.blockTitle}>
+        {filterSubclass.id}: {filterSubclass.name} {filterSubclass.description}
+      </div>
+      <div className={styles.blockVariableList}>
+        {
+          filterSubclass.variables.map((v, i) => (
+            <span key={i} className={classNames({[styles.blockVariableUnavailable]: !varAvail[v]})}>
               {`${i > 0 ? ', ': ''}${v}`}
             </span>
           ))
@@ -184,9 +223,12 @@ export async function getStaticProps() {
 
   const codebook = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Codebook.csv'))
   const variableProgress  = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo Codebook Variable Progress - Variables.csv'))
-
   const measureData = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Measures.csv'))
   const caseflowSectionData = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Caseflow Sections.csv'))
+  const filterClassesData = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Filter Classes.csv'))
+  const filterSubclassesData = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Filter Subclasses.csv'))
+  const filterGroupsData = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Filter Groups.csv'))
+  const filtersData = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Filters.csv'))
 
   // Create a master map of variables
   const variables = codebook.reduce((a, v) => {
@@ -283,46 +325,88 @@ export async function getStaticProps() {
     }
   })
 
-  // Remove all variables that aren't referenced in by the measures
+  const findMeasureById = (id) => {
+    return measures.find(m => m.id === parseInt(id))
+  }
+
+  const filterSubclasses = filterSubclassesData.map(fsc => ({
+    id: parseInt(fsc['DB ID']),
+    filterClass: filterClassesData.find(fc => fc['DB ID'] === fsc['Filter Class'])['Name'],
+    order: parseInt(fsc['Order']),
+    name: fsc['Name'],
+    description: fsc['Description'],
+    variables: unique(filterGroupsData
+      .filter(fg => fg['Filter Subclass'] === fsc['DB ID'])
+      .reduce((acc, fg) => {
+        acc.push(...fg['Filters']
+          .trim()
+          .split(',')
+          .map(id => parseVariablesFromExp(filtersData.find(d => d['DB ID'] === id)['Expression']))
+          .flat()
+        )
+        return acc
+      }, []))
+  }))
+
+  // Remove all variables that aren't referenced in by the measures or filters
   const variableList = Object.values(variables)
-    .filter(v => {
-    // // If it has any status or is referenced by the measures, keep it
-    return v.priority.length > 0 || (measures.find(m => m.variables.find(mv => mv === v.name)))
-  }).sort((a, b) => a.name.localeCompare(b.name))
+    .filter(v =>
+      v.priority.length > 0 || // It has any status
+      measures.find(m => m.variables.find(mv => mv === v.name)) || // or is referenced by a measure
+      filterSubclasses.find(f => f.variables.find(fv => fv === v.name)) // Or is referenced by a filter
+  ).sort((a, b) => a.name.localeCompare(b.name))
 
  const sections = []
 
   // Add the goals measure, this comes from directus, we'll just hardcode the id here
   sections.push({
     name: 'Prosecutor Goal',
-    measures: [656]
+    measures: [findMeasureById(656)]
   })
 
   // Add the caseflow sections
   caseflowSectionData.forEach(s => {
     sections.push({
       name: 'Monthly Caseflow: ' + s['Name'].trim(),
-      measures: [parseInt(s['Measure'].trim())]
+      measures: [findMeasureById(s['Measure'])]
     })
 
     sections.push({
       columns: [{
         name: 'Data Viz',
-        measures: s['Pie Chart Breakdown'].split(',').map(v => parseInt(v.trim()))
+        measures: s['Pie Chart Breakdown']
+          .split(',')
+          .map(v => findMeasureById(v))
       }, {
         name: 'Misdemeanor',
         measures: [
-          parseInt(s['Misdemeanor']),
-          ...s['Misdemeanor Breakdown'].split(',').map(v => parseInt(v.trim()))
+          findMeasureById(s['Misdemeanor']),
+          ...s['Misdemeanor Breakdown'].split(',').map(v => findMeasureById(v))
         ]
       }, {
         name: 'Felony',
         measures: [
-          parseInt(s['Felony']),
-          ...s['Felony Breakdown'].split(',').map(v => parseInt(v.trim()))
+          findMeasureById(s['Felony']),
+          ...s['Felony Breakdown'].split(',').map(v => findMeasureById(v))
         ]
       }]
     })
+  })
+
+  // Add the Other Caseflow Explore Measures
+  sections.push({
+    name: 'Monthly Case Flow: Explore Only Measures',
+    measures: measures
+      .filter(m =>
+        m.measureGroups.find(g => g.type === 'Case Flow Detail') &&
+        !m.measureGroups.find(g => g.type === 'Case Flow')
+      )
+      .sort((a, b) => (a.id - b.id))
+  })
+
+  sections.push({
+    name: 'Filters',
+    filterSubclasses: filterSubclasses
   })
 
   // Add the annual measures
@@ -332,42 +416,22 @@ export async function getStaticProps() {
 
   sections.push({
     name: 'Annual Measures',
-    measures: annualMeasures.map(m => m.id)
+    measures: annualMeasures
   })
 
   sections.push({
-    name: 'Other Annual Measure Companions',
+    name: 'Annual Measure: Companions',
     measures: measures
       .filter(m =>
         m.measureGroups.find(g => g.type === 'Performance' && g.group === 'Companion') &&
         annualMeasures.find(a => a.relatedMeasures.find(r => r === m.id))
       )
       .sort((a, b) => (a.id - b.id))
-      .map(m => m.id)
   })
-
-  // Handle @ variables like  @TotDrgHybridCrts in - 118	Performance, Companion: 18	Drug Courts
-
-  // Add filters
-  // Add explore view measures section (by measure group)
-
-  // Add more columns to the checkboxes: Status, Missing, Priority
-  // Allow sorting of each column
-
-  // Initialize checkboxes with those already done variables as a starting place
-  // Within each group
-  //    Add the measure id: name
-  //    Add list all variables mark missing bold or with background dark?
-  // Publish it to gihub pages
-  // Get it to read the googlesheet directly alternatily local excel sheet
-
-  // Checkboxes add
-  //    Sort/Group: Alpha, Priority (from Variable Progress)
 
   return {
     props: {
       variables: variableList,
-      measures,
       sections
     }
   }
