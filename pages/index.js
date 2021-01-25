@@ -13,6 +13,8 @@ export default function Home({ variables, sections }) {
     return a
   }, {}))
 
+  const [details, setDetails] = useState(false)
+
   const updateVarAvail = (e) => {
     setVarAvail({
       ...varAvail,
@@ -20,25 +22,29 @@ export default function Home({ variables, sections }) {
     })
   }
 
-  const selectAll = (e) => {
+  const selectAll = () => {
     setVarAvail(variables.reduce((a, v) => {
       a[v.name] = true
       return a
     }, {}))
   }
 
-  const selectNone = (e) => {
+  const selectNone = () => {
     setVarAvail(variables.reduce((a, v) => {
       a[v.name] = false
       return a
     }, {}))
   }
 
-  const resetVars = (e) => {
+  const resetVars = () => {
     setVarAvail(variables.reduce((a, v) => {
       a[v.name] = (v.status === 'Done' || v.status === 'Fixup')
       return a
     }, {}))
+  }
+
+  const toggleDetails = () => {
+    setDetails(!details)
   }
 
   return (
@@ -57,6 +63,7 @@ export default function Home({ variables, sections }) {
               <button onClick={selectAll}>All</button>
               <button onClick={selectNone}>None</button>
               <button onClick={resetVars}>Reset</button>
+              <button onClick={toggleDetails}>{`${details ? 'Hide' : 'Show'} Details`}</button>
             </div>
 
 
@@ -73,7 +80,7 @@ export default function Home({ variables, sections }) {
             <div><i>Missing sections highlighted in red and missing variables are bold.</i></div>
             {
               sections.map((s,i) =>
-                <MeasureSection key={i} section={s} varAvail={varAvail}/>
+                <MeasureSection key={i} section={s} varAvail={varAvail} details={details}/>
               )
             }
           </div>
@@ -96,7 +103,7 @@ const CheckBox = ({id, checked, onChange}) => {
   )
 }
 
-const MeasureSection = ({section, varAvail}) => {
+const MeasureSection = ({section, varAvail, details}) => {
   let contents
 
   if(section.measures) {
@@ -109,6 +116,7 @@ const MeasureSection = ({section, varAvail}) => {
             key={measure.id}
             measure={measure}
             varAvail={varAvail}
+            details={details}
           />
         ))
       }
@@ -127,6 +135,7 @@ const MeasureSection = ({section, varAvail}) => {
                     className={styles.sectionCell}
                     measure={measure}
                     varAvail={varAvail}
+                    details={details}
                   />
                 ))
               }
@@ -145,6 +154,7 @@ const MeasureSection = ({section, varAvail}) => {
               key={filterSubclass.id}
               filterSubclass={filterSubclass}
               varAvail={varAvail}
+              details={details}
             />
           ))
         }
@@ -155,7 +165,7 @@ const MeasureSection = ({section, varAvail}) => {
   return <div className={styles.section}>{contents}</div>
 }
 
-const MeasureBlock = ({className, measure, varAvail}) => {
+const MeasureBlock = ({className, measure, varAvail, details}) => {
   // If one variable isn't available, the measure isn't available
   const measureAvailable = !measure.variables.find(v => !varAvail[v])
 
@@ -166,23 +176,29 @@ const MeasureBlock = ({className, measure, varAvail}) => {
         styles.dataBlock,
         measureAvailable ? styles.available: styles.unavailable
       )}>
-      <div className={styles.blockTitle}>
-        {measure.id}: {measure.name}
-      </div>
-      <div className={styles.blockVariableList}>
-        {
-          measure.variables.map((v, i) => (
-            <span key={i} className={classNames({[styles.blockVariableUnavailable]: !varAvail[v]})}>
-              {`${i > 0 ? ', ': ''}${v}`}
-            </span>
-          ))
-        }
-      </div>
+      {
+        details && (
+          <>
+            <div className={styles.blockTitle}>
+              {measure.id}: {measure.name}
+            </div>
+            <div className={styles.blockVariableList}>
+              {
+                measure.variables.map((v, i) => (
+                  <span key={i} className={classNames({[styles.blockVariableUnavailable]: !varAvail[v]})}>
+                {`${i > 0 ? ', ': ''}${v}`}
+              </span>
+                ))
+              }
+            </div>
+          </>
+        )
+      }
     </div>
   )
 }
 
-const FilterBlock = ({className, filterSubclass, varAvail}) => {
+const FilterBlock = ({className, filterSubclass, varAvail, details}) => {
   // If one variable isn't available, the filter isn't available
   const available = !filterSubclass.variables.find(v => !varAvail[v])
 
@@ -193,18 +209,24 @@ const FilterBlock = ({className, filterSubclass, varAvail}) => {
         styles.dataBlock,
         available ? styles.available: styles.unavailable
       )}>
-      <div className={styles.blockTitle}>
-        {filterSubclass.id}: {filterSubclass.name} {filterSubclass.description}
-      </div>
-      <div className={styles.blockVariableList}>
-        {
-          filterSubclass.variables.map((v, i) => (
-            <span key={i} className={classNames({[styles.blockVariableUnavailable]: !varAvail[v]})}>
-              {`${i > 0 ? ', ': ''}${v}`}
-            </span>
-          ))
-        }
-      </div>
+      {
+        details && (
+          <>
+            <div className={styles.blockTitle}>
+              {filterSubclass.id}: {filterSubclass.name} {filterSubclass.description}
+            </div>
+            <div className={styles.blockVariableList}>
+              {
+                filterSubclass.variables.map((v, i) => (
+                  <span key={i} className={classNames({[styles.blockVariableUnavailable]: !varAvail[v]})}>
+                {`${i > 0 ? ', ': ''}${v}`}
+              </span>
+                ))
+              }
+            </div>
+          </>
+        )
+      }
     </div>
   )
 }
@@ -393,6 +415,11 @@ export async function getStaticProps() {
     })
   })
 
+  sections.push({
+    name: 'Filters',
+    filterSubclasses: filterSubclasses
+  })
+
   // Add the Other Caseflow Explore Measures
   sections.push({
     name: 'Monthly Case Flow: Explore Only Measures',
@@ -402,11 +429,6 @@ export async function getStaticProps() {
         !m.measureGroups.find(g => g.type === 'Case Flow')
       )
       .sort((a, b) => (a.id - b.id))
-  })
-
-  sections.push({
-    name: 'Filters',
-    filterSubclasses: filterSubclasses
   })
 
   // Add the annual measures
