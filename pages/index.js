@@ -9,42 +9,108 @@ import { unique, parseVariablesFromExp, parseMeasureGroups} from '../src/utils.j
 export default function Home({ variables, sections }) {
 
   const [varAvail, setVarAvail] = useState(variables.reduce((a, v) => {
-    a[v.name] = (v.status === 'Done' || v.status === 'Fixup')
+    a[v.name] = (v.status === 'Done' && v.missing !== null && v.missing < 0.3)
     return a
   }, {}))
 
   const [details, setDetails] = useState(false)
+  const [sortField, setSortField] = useState('name')
+  const [sortDirection, setSortDirection] = useState('ascending')
 
-  const updateVarAvail = (e) => {
+  const updateVarAvail = (varName) => {
     setVarAvail({
       ...varAvail,
-      [e.target.id]: e.target.checked
+      [varName]: !varAvail[varName]
     })
   }
 
-  const selectAll = () => {
+  const setVars = (value) => {
     setVarAvail(variables.reduce((a, v) => {
-      a[v.name] = true
-      return a
-    }, {}))
-  }
-
-  const selectNone = () => {
-    setVarAvail(variables.reduce((a, v) => {
-      a[v.name] = false
+      a[v.name] = value
       return a
     }, {}))
   }
 
   const resetVars = () => {
     setVarAvail(variables.reduce((a, v) => {
-      a[v.name] = (v.status === 'Done' || v.status === 'Fixup')
+      a[v.name] = (v.status === 'Done' && v.missing !== null && v.missing < 0.3)
       return a
     }, {}))
   }
 
   const toggleDetails = () => {
     setDetails(!details)
+  }
+
+  const toggleSortVars = (field) => {
+    let direction
+
+    // If the same field, toggle the direction
+    if(field === sortField) {
+      direction = sortDirection === 'ascending' ? 'descending' : 'ascending'
+    } else if(field === 'name' || field === 'status' || field === 'priority') {
+      direction = 'ascending'
+    } else {
+      direction = 'descending'
+    }
+
+    setSortField(field)
+    setSortDirection(direction)
+    sortVarsBy(field, direction)
+  }
+
+  const sortVarsBy = (field, direction) => {
+    console.log(`sortVarsBy field:${field} direction: ${direction}`)
+
+    if(field === 'name') {
+      variables.sort(direction === 'ascending'
+        ? (a, b) => compareNames(a, b)
+        : (a, b) => compareNames(b, a)
+      )
+    } else if (field === 'priority') {
+      variables.sort(direction === 'ascending'
+        ? (a, b) => comparePriority(a, b)
+        : (a, b) => comparePriority(b, a)
+      )
+    } else if (field === 'missing') {
+      variables.sort(direction === 'ascending'
+        ? (a, b) => compareMissing(a, b)
+        : (a, b) => compareMissing(b, a)
+      )
+    } else if(field === 'status') {
+      return variables.sort(direction === 'ascending'
+        ? (a, b) => compareStatus(a, b)
+        : (a, b) => compareStatus(b, a)
+      )
+    }
+  }
+
+  const compareNames = (a, b) => {
+    return a.name.localeCompare(b.name)
+  }
+
+  const comparePriority = (a, b) => {
+    let pa = (a.priority === '') ? 1000 : a.priority
+    let pb = (b.priority === '') ? 1000 : b.priority
+    return pa === pb ? compareNames(a, b) : pa - pb
+  }
+
+  const compareMissing = (a, b) => {
+    let ma = (a.missing === null) ? -1 : a.missing
+    let mb = (b.missing === null) ? -1 : b.missing
+    return ma === mb ? compareNames(a, b) : ma - mb
+  }
+
+  const STATUS_ORDER = ['Done', 'Fixup', '']
+
+  const compareStatus = (a, b) => {
+    if(a.status === b.status) {
+      return compareNames(a, b)
+    } else {
+      let ar = STATUS_ORDER.indexOf(a.status)
+      let br = STATUS_ORDER.indexOf(b.status)
+      return ar - br
+    }
   }
 
   return (
@@ -60,20 +126,44 @@ export default function Home({ variables, sections }) {
           <div className={styles.variables}>
 
             <div className={styles.buttonBar}>
-              <button onClick={selectAll}>All</button>
-              <button onClick={selectNone}>None</button>
+              <button onClick={() => setVars(true)}>All</button>
+              <button onClick={() => setVars(false)}>None</button>
               <button onClick={resetVars}>Reset</button>
               <button onClick={toggleDetails}>{`${details ? 'Hide' : 'Show'} Details`}</button>
             </div>
 
+            <table className={styles.variableTable}>
+              <thead>
+                <tr>
+                  {/*const SortLabel = (name, sortField, sortDirection) => {*/}
 
-            <div className={styles.variableList}>
+                  <th onClick={() => toggleSortVars('name')}>
+                    <SortLabel field='name' sortField={sortField} sortDirection={sortDirection}>Name</SortLabel>
+                  </th>
+                  <th onClick={() => toggleSortVars('priority')}>
+                    <SortLabel field='priority' sortField={sortField} sortDirection={sortDirection}>Priority</SortLabel>
+                  </th>
+                  <th onClick={() => toggleSortVars('missing')}>
+                    <SortLabel field='missing' sortField={sortField} sortDirection={sortDirection}>Missing</SortLabel>
+                  </th>
+                  <th onClick={() => toggleSortVars('status')}>
+                    <SortLabel field='status' sortField={sortField} sortDirection={sortDirection}>Status</SortLabel>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
               {
-                Object.keys(varAvail).map(k =>
-                  <CheckBox key={k} id={k} checked={varAvail[k]} onChange={updateVarAvail} />
+                variables.map(v =>
+                  <tr key={v.name} onClick={() => updateVarAvail(v.name)}>
+                    <td><CheckBox key={v.name} id={v.name} variable={v} checked={varAvail[v.name]} /></td>
+                    <td>{v.priority}</td>
+                    <td><span className={(v.missing >= 0.3 || v.missing === null) ? styles.missingVar : undefined}>{v.missing !== null ? (v.missing * 100).toFixed(2)+'%' : 'N/A'}</span></td>
+                    <td>{v.status}</td>
+                  </tr>
                 )
               }
-            </div>
+              </tbody>
+            </table>
           </div>
           <div className={styles.impact}>
             <h1>Commons Variable Impact Analyzer</h1>
@@ -90,15 +180,23 @@ export default function Home({ variables, sections }) {
   )
 }
 
-const CheckBox = ({id, checked, onChange}) => {
+const SortLabel = ({field, sortField, sortDirection, children}) => {
+  return (
+    <span className={classNames(field === sortField && [styles.sorted, styles[sortDirection]])}>{children}</span>
+  )
+}
+
+const CheckBox = ({id, checked}) => {
   return (
     <div className={styles.variable}>
       <input
+        className={styles.checkbox}
         type='checkbox' id={id}
-        onChange={(e) => onChange(e)}
         checked={checked}
+        readOnly={true}
       />
-      <label htmlFor={id}>{id}</label>
+      <label
+        className={styles.label}>{id}</label>
     </div>
   )
 }
@@ -129,9 +227,9 @@ const MeasureSection = ({section, varAvail, details}) => {
           section.columns.map((c, i) => (
             <div key={i} className={styles.sectionColumn}>
               {
-                c.measures.map(measure => (
+                c.measures.map((measure, i) => (
                   <MeasureBlock
-                    key={measure.id}
+                    key={i}
                     className={styles.sectionCell}
                     measure={measure}
                     varAvail={varAvail}
@@ -149,9 +247,9 @@ const MeasureSection = ({section, varAvail, details}) => {
       <div>
         <h2>{section.name}</h2>
         {
-          section.filterSubclasses.map(filterSubclass => (
+          section.filterSubclasses.map((filterSubclass, i) => (
             <FilterBlock
-              key={filterSubclass.id}
+              key={i}
               filterSubclass={filterSubclass}
               varAvail={varAvail}
               details={details}
@@ -260,7 +358,8 @@ export async function getStaticProps() {
         name: name,
         status: '',
         priority: '',
-        dependsOn: []
+        missing: null,
+        dependsOn: [],
       }
     }
     return a
@@ -274,17 +373,20 @@ export async function getStaticProps() {
       console.error(`Progress Variable: ${name} not found in codebook`)
     } else {
       v.status = p['Status*']
-      v.priority = p['Priority']
+      v.priority = parseInt(p['Priority'])
+      v.missing = p['Current Missingness Forecast'] ? parseFloat(p['Current Missingness Forecast']) / 100 : null
 
       let dependsOn  = [...(p['Depends On Variable'].split(',').map(v => v.trim()))]
       dependsOn.forEach(d => {
         if(d.length > 0) {
           if(!variables[d]) {
             console.error(`Progress Variable: ${name} depends on variable ${d} not found in codebook`)
+          } else if(!variableProgress.find(vp => vp['Variable'] === d)) {
+            // Only include variables found in variable progress
+              console.error(`Progress Variable: ${name} depends on variable ${d} not found in variable progress sheet`)
           } else {
             v.dependsOn.push(d)
           }
-
         }
       })
     }

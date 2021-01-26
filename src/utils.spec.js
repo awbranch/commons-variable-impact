@@ -53,6 +53,17 @@ describe('parseMeasureGroups', () => {
       ])
   })
 
+  it('colon separators', () => {
+
+    expect(parseMeasureGroups('Performance, Primary:\nGoal, Public Safety:\nStage: Post-resolution:'))
+      .toEqual([
+        {type: 'Performance', group: 'Primary'},
+        {type: 'Goal', group: 'Public Safety'},
+        {type: 'Stage', group: 'Post-resolution'},
+      ])
+  })
+
+
 // Group Type, Group: [Order]
 // Performance, Companion: 26
 // Contextual, Population: 1

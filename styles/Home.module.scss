@@ -6,8 +6,8 @@
 .variables {
   padding: 0.5rem 0.5rem;
   height: 100vh;
-  overflow-y: scroll;
-  min-width: 23rem;
+  overflow: scroll;
+  min-width: 30rem;
 }
 
 .impact {
@@ -18,15 +18,67 @@
 }
 
 
-.variableList {
+.variableTable {
   margin: 1rem 0 2rem 0;
+  border-collapse: collapse;
+
+  th {
+    font-size: 8pt;
+    font-weight: normal;
+    text-align: left;
+    border-bottom: 1px solid black;
+    padding-right: 1.5em;
+    cursor: pointer;
+    &:hover {
+      color: lightgray;
+    }
+  }
+
+  td {
+    padding: 0.2rem;
+  }
+
+  tbody > tr:hover {
+    background-color: #eeeeee;
+    cursor: pointer;
+  }
+}
+
+.sorted {
+  position: relative;
+  &::after {
+    position: absolute;
+    right: -0.9em;
+    top: 0;
+  }
+
+  &.ascending::after {
+    content: "↑";
+  }
+
+  &.descending::after {
+    content: "↓";
+  }
 }
 
 .variable {
-  margin-top: 0.5rem;
-  margin-right: 1rem;
-  white-space: nowrap;
+  //margin-top: 0.5rem;
+  //margin-right: 1rem;
+  //white-space: nowrap;
 }
+
+.checkbox {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.label {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 
 .section {
 
@@ -88,4 +140,9 @@
 
 .blockVariableUnavailable {
   font-weight: 800;
+}
+
+.missingVar {
+  // background-color: #f0b9b6;
+  color: #bc696b;
 }

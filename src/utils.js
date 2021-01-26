@@ -22,7 +22,7 @@ export const parseMeasureGroups = (text) => {
   const groups = []
   const parts = text.trim().split('\n')
   parts.forEach(p => {
-    const found = p.match(/([\w\s]+),\s*([\w\s]+)\s*:?\s*(\d*)/)
+    const found = p.match(/([\w\s]+)[,:]\s*([\w\s\-]+)\s*:?\s*(\d*)/)
     if(!found) {
       console.log(`Unable to parse measure group: ${text}`)
     } else {

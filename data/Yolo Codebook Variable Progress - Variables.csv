@@ -1,94 +1,94 @@
-Variable,Measure Count,Filter Count,Priority,Low Hanging Fruit,Status*,Implementation  Order,Target Delivery Date - Best Case,Missing 2019,Missing 2020,1/21/21 Missingness Forecast,,1/22/21 Update Notes,Depends On Variable,Notes
-DysArrgnmtToClsr,8,0,1 - Highest,,Done,,,80.8%,91.60%,,,,"IntApprncDt,DispoDt",
-DysArrstToFiling,6,0,1 - Highest,,Done,,,51.5%,52.60%,,,,"ArrstDt,FilingDt",
-DysFilingToIntApprnc,6,0,1 - Highest,,Done,,,63.10%,75.60%,,,,"FilingDt,IntApprncDt",
-DysOffnsToArrst,6,0,1 - Highest,,Done,,,51.90%,56.50%,,,,"OffenseDt,ArrstDt",
-DysOffnsToClsr,6,0,1 - Highest,,Done,,,9.2%,17.00%,,,,"OffenseDt,DispoDt",
-MFJCaseNo,0,0,1 - Highest,yes,Fixup,0,,0.00%,0.00%,same,,,,"Leaving as ""fixup"" for now—current value is unique identifier, just not structured per SOP case number generation"
-Prosecuted,110,0,1 - Highest,yes,Fixup,1,11/30/2020,0.20%,0.10%,same,,,,Does not implement all checks/inferences in syntax.
-TopRfrrdChrgFelMisd,68,1,1 - Highest,yes,Done,2,12/1/2020,0.40%,0.30%,same,,,,
-TopRfrrdChrgOffnsType,42,7,1 - Highest,yes,Done,3,12/2/2020,2.30%,1.50%,same,,,,
-TopFilingChrgFelMisd,52,1,1 - Highest,yes,Done,4,12/4/2020,0.30%,0.30%,same,,,,
-TopFilingChrgOffnsType,0,3,1 - Highest,yes,Done,5,12/7/2020,0.80%,1.00%,same,,,,
-TopCnvctnChrgFelMisd,23,1,1 - Highest,yes,Done,6,12/8/2020,3.6%,12.20%,same,,,,
-TopCnvctnChrgOffnsType,0,3,1 - Highest,yes,Done,7,12/9/2020,4.2%,11.30%,same,,,,
-CaseDisposition,47,0,1 - Highest,,Fixup,11,12/15/2020,86.6%,52.70%,"~40% missing, pending word on open cases",Will getting existing rules from Rae to implement - This is the hardest to provide the rules,"If Shazmeena starts working on Monday, she can start with the current CaseDispo missingness list.",,"Output is currently untrustworthy, mismatches lots of other case variables. Not checked against syntax yet."
-TopSntnc,46,0,1 - Highest,yes,Fixup,8,12/10/2020,5.8%,15.3%,same,,,,Pulling from calendar; should add outcome terms
-TrialType,20,0,1 - Highest,yes,Fixup,9,12/11/2020,21.4%,0.00%,same,,,,"Pulling only from charge outcomes, should add calendar (only two trials currently evidenced in 2020…)"
-DfrrlDvrsn,38,0,1 - Highest,,Fixup,10,12/14/2020,0.0%,0.0%,"same, pending new delivery",,,,Currently being populated from grants. Needs additional information imported from NHC spreadsheet.
-DvrsnPrgrm,30,1,1 - Highest,,Fixup,12,12/16/2020,81.3%,99.10%,"same, pending new delivery",,Classify DEJ as Other,,Currently being populated from grants. Needs additional information imported from NHC spreadsheet.
-CaseStatus,23,0,1 - Highest,,Done,13,12/17/2020,34.60%,17.50%,"~40% missing, pending word on open cases",Will waiting for rules from Rae,Seems there are problems with fully identifying pending cases.,CaseDisposition,
-OffenseDt,,,1 - Highest,,Done,5,,0.50%,0.50%,same,,,,"Least missing
+Variable,Measure Count,Filter Count,Priority,Low Hanging Fruit,Status*,Implementation  Order,Target Delivery Date - Best Case,Missing 2019,Missing 2020,Current Missingness Forecast,1/21/21 Missingness Forecast Notes,,1/22/21 Update Notes,Depends On Variable,Notes
+DysArrgnmtToClsr,8,0,1 - Highest,,Done,,,80.8%,91.60%,59.00%,,,,"IntApprncDt,DispoDt",
+DysRfrrlToFiling,6,0,1 - Highest,,Done,,,,,29.00%,,,,"RfrrlDt, FilingDt",
+DysFilingToIntApprnc,6,0,1 - Highest,,Done,,,63.10%,75.60%,59.00%,,,,"FilingDt,IntApprncDt,Prosecuted",
+DysOffnsToRfrrl,6,0,1 - Highest,,Done,,,,,0.50%,,,,"OffenseDt,RfrrlDt",
+DysOffnsToClsr,6,0,1 - Highest,,Done,,,9.2%,17.00%,40.00%,,,,"OffenseDt,DispoDt",
+MFJCaseNo,1,0,1 - Highest,yes,Fixup,0,,0.00%,0.00%,0.00%,same,,,"CaseYr,CountyID","Leaving as ""fixup"" for now—current value is unique identifier, just not structured per SOP case number generation"
+Prosecuted,110,0,1 - Highest,yes,Fixup,1,11/30/2020,0.20%,0.10%,0.10%,same,,,CaseDisposition,Does not implement all checks/inferences in syntax.
+TopRfrrdChrgFelMisd,68,1,1 - Highest,yes,Done,2,12/1/2020,0.40%,0.30%,0.30%,same,,,TopRfrrdChrgSvrtyOrgnl,
+TopRfrrdChrgOffnsType,42,7,1 - Highest,yes,Done,3,12/2/2020,2.30%,1.50%,1.50%,same,,,TopRfrrdChrgOffns,
+TopFilingChrgFelMisd,52,1,1 - Highest,yes,Done,4,12/4/2020,0.30%,0.30%,0.30%,same,,,TopFilingChrgSvrtyOrgnl,
+TopFilingChrgOffnsType,0,3,1 - Highest,yes,Done,5,12/7/2020,0.80%,1.00%,1.00%,same,,,TopFilingChrgOffns,
+TopCnvctnChrgFelMisd,23,1,1 - Highest,yes,Done,6,12/8/2020,3.6%,12.20%,12.00%,same,,,TopCnvctnChrgSvrtyOrgnl,
+TopCnvctnChrgOffnsType,0,3,1 - Highest,yes,Done,7,12/9/2020,4.2%,11.30%,11.00%,same,,,TopCnvctnChrgOffns,
+CaseDisposition,47,0,1 - Highest,,Done,11,12/15/2020,86.6%,52.70%,40.00%,"~40% missing, pending word on open cases",Will getting existing rules from Rae to implement - This is the hardest to provide the rules,"If Shazmeena starts working on Monday, she can start with the current CaseDispo missingness list.","GltyTrl,DfrrlDvrsn,GltyPlea,GltyUnknwn,NotGltyTrl,Dsmssd,Othr,Trnsfrrd,UnkwnDispo","Output is currently untrustworthy, mismatches lots of other case variables. Not checked against syntax yet."
+TopSntnc,46,0,1 - Highest,yes,Fixup,8,12/10/2020,5.8%,15.3%,15.30%,same,,,"CaseDisposition,Death,Life,TmSrvdSntnc,Prison,Probation,Jail,LftmSprvsn,SpltSntncPrsn,SpltSntncJail,SpltSntnc,OthrCnfnmnt,Probation,FineFlag,Rstttn,OtherSntnc",Pulling from calendar; should add outcome terms
+TrialType,20,0,1 - Highest,yes,Fixup,9,12/11/2020,21.4%,0.00%,0.00%,same,,,Trial,"Pulling only from charge outcomes, should add calendar (only two trials currently evidenced in 2020…)"
+DfrrlDvrsn,38,0,1 - Highest,,Fixup,10,12/14/2020,0.0%,0.0%,0.00%,"same, pending new delivery",,,,Currently being populated from grants. Needs additional information imported from NHC spreadsheet.
+DvrsnPrgrm,30,1,1 - Highest,,Fixup,12,12/16/2020,81.3%,99.10%,99.00%,"same, pending new delivery",,Classify DEJ as Other,,Currently being populated from grants. Needs additional information imported from NHC spreadsheet.
+CaseStatus,23,0,1 - Highest,,Done,13,12/17/2020,34.60%,17.50%,40.00%,"~40% missing, pending word on open cases",Will waiting for rules from Rae,Seems there are problems with fully identifying pending cases.,CaseDisposition,
+OffenseDt,,,1 - Highest,,Done,5,,0.50%,0.50%,0.50%,same,,,,"Least missing
 Implemented in ETL; not checking statutes of limitations yet
 WB 1/11: Yolo will manually fix any remaining issues"
-ArrstDt,,,4 - Low,,Done,6,,51.60%,56.20%,"""We will use RfrrlDt instead""",,,,"Yolo thinks this should be reliable, but is really bad.
+ArrstDt,,,4 - Low,,Done,6,,51.60%,56.20%,0.00%,"""We will use RfrrlDt instead""",,,RfrrdChrgIntlActn,"Yolo thinks this should be reliable, but is really bad.
 WB 1/11: We will drop this and use referral date instead "
-CitationDt,,,,,,,,,,"""We will use RfrrlDt instead""",,,,"See conversation in &yolo_data from 2020-12-22. To be derived from parties_in_case.action_date for certain actions.
+CitationDt,,,,,,,,,,0.00%,"""We will use RfrrlDt instead""",,,RfrrdChrgIntlActn,"See conversation in &yolo_data from 2020-12-22. To be derived from parties_in_case.action_date for certain actions.
 WB 1/11: We will drop this and use referral date instead "
-RfrrlDt,,,1 - Highest,,Done,1,,0.20%,0.00%,"same, pending new delivery",,,,"Non missing
+RfrrlDt,,,1 - Highest,,Done,1,,0.20%,0.00%,0.00%,"same, pending new delivery",,,,"Non missing
 WB 1/11: Yolo will manually review any remaining issues"
-FilingDt,,,1 - Highest,,Done,3,,13.30%,29.60%,pending update from new delivery,,List of missing cases to be provided on Wednesday,,"Non missing
+FilingDt,,,1 - Highest,,Done,3,,13.30%,29.60%,29.00%,pending update from new delivery,,List of missing cases to be provided on Wednesday,,"Non missing
 WB 1/11: We are awaiting a rule from Yolo"
-IntApprncDt,,,1 - Highest,,Done,2,,53.30%,77.90%,"59% 2019, pending new rules from Yolo",,We have a new rule. RC estimates this will bring missingness down dramatically. - by 1/29,,"The data point they have use seems inaccurate, too late.
+IntApprncDt,,,1 - Highest,,Done,2,,53.30%,77.90%,59.00%,"59% 2019, pending new rules from Yolo",,We have a new rule. RC estimates this will bring missingness down dramatically. - by 1/29,,"The data point they have use seems inaccurate, too late.
 WB 1/11: Yolo is looking into this. It is a problem on their end"
-DfrrlOrdrDt,,,1 - Highest,,,,,NOTAVAILABLEYET,NOTAVAILABLEYET,"roughly 73%, pending new rules from Yolo",,GE & RH need to regroup to decide whether we can use DispoDt as proxy for this,,"This is not something that is readily available in LawSuite, so we'll need to create it based on the work Liz is doing on the diversions spreadsheet.
+DfrrlOrdrDt,,,1 - Highest,,,,,NOTAVAILABLEYET,NOTAVAILABLEYET,73.00%,"roughly 73%, pending new rules from Yolo",,GE & RH need to regroup to decide whether we can use DispoDt as proxy for this,,"This is not something that is readily available in LawSuite, so we'll need to create it based on the work Liz is doing on the diversions spreadsheet.
 WB 1/11: Proxy Dates, Engagement, Acceptance, Offer Dates
 The sheet is based on data delivery in August. 
 Another batch for Aug to December. Has LawSuite been fixed for 2021?
 Data gets better more recently so may not be an issue going forward."
-DispoDt,,,1 - Highest,,Fixup,4,,65.70%,93.30%,"about 40% for 2019-20, pending new declination work",Rae evaluating new rules from RC,List of missing cases to be provided on Wednesday,,"Missing, not reliable and coming from multiple sources. Trying to get from charge except when not closed out.
+DispoDt,,,1 - Highest,,Fixup,4,,65.70%,93.30%,40.00%,"about 40% for 2019-20, pending new declination work",Rae evaluating new rules from RC,List of missing cases to be provided on Wednesday,,"Missing, not reliable and coming from multiple sources. Trying to get from charge except when not closed out.
 WB 1/11: We know where a lot of problems are and are awating a rule. Having a follow up meeting with Ryan today to address."
-SntncDt,,,1 - Highest,,Fixup,2,,100.00%,100.00%,<1%,Rae evaluating new rules from RC,,,"Yolo approved use of court date for this.
+SntncDt,,,1 - Highest,,Fixup,2,,100.00%,100.00%,1.00%,<1%,Rae evaluating new rules from RC,,,"Yolo approved use of court date for this.
 WB 1/11: We know where a lot of problems are and are awating a rule. Having a follow up meeting with Ryan today to address."
-AnyCnvctnChrgNoPrbtn,3,0,2 - High,,Done,,,3.8%,11.50%,same,,,,
-ArrstngAgncy,0,1,2 - High,yes,Done,,,0.20%,0.70%,same,,,,
-Cnvctd,6,0,2 - High,,Done,,,0%,NA,same,,,,
-DefAgeGroups,0,1,2 - High,yes,Done,,,0.30%,0.60%,same,,,,
-DefCntyRsdnt,0,1,2 - High,yes,Done,,,#N/A,#N/A,same,,,,
-DefRace,0,2,2 - High,yes,Done,,,11.20%,11.20%,same,,,,
-DefSex,0,1,2 - High,yes,Done,,,1.10%,1.00%,same,,,,
-DysFilingToClsr,6,0,2 - High,,Done,,,8.7%,15.90%,Needs to be renamed?,,,,
-CaseYr,7,0,2 - High,,Done,,,0.00%,0%,same,,,"FilingDt,RfrrlDt",Is needed for a complete audit
-CVCFlag,4,0,2 - High,,,,,#N/A,#N/A,same,,,,
-PriorsFlag,6,0,2 - High,,,,,31.3%,41.90%,same,,,,
-ReCnvctnSntncFlag,1,0,2 - High,,,,,#N/A,#N/A,same,,,,
-TopCnvctnPblcOrdrOffnsType,0,1,2 - High,,,,,4.2%,11.30%,same,,,,
-TopCnvctnPrprtyOffnsType,0,1,2 - High,,,,,4.2%,11.30%,same,,,,
-TopCnvctnVlntOffnsType,0,1,2 - High,,,,,4.2%,11.30%,same,,,,
-TopFilingPblcOrdrOffnsType,0,1,2 - High,,,,,0.80%,1.00%,same,,,,
-TopFilingPrprtyOffnsType,0,1,2 - High,,,,,0.80%,1.00%,same,,,,
-TopFilingVlntOffnsType,0,1,2 - High,,,,,0.80%,1.00%,same,,,,
-TopRfrrdPblcOrdrOffnsType,0,1,2 - High,,,,,2.30%,1.50%,same,,,,
-TopRfrrdPrprtyOffnsType,0,1,2 - High,,,,,2.30%,1.50%,same,,,,
-TopRfrrdVlntOffnsType,0,1,2 - High,,,,,2.30%,1.50%,same,,,,
-CnvctnMthd,0,1,3 - Medium,,,,,#N/A,#N/A,,,,,
-ArrestCity,0,1,3 - Medium,,,,,NOTAVAILABLEYET,NOTAVAILABLEYET,,,,,
-DefHmlss,0,1,3 - Medium,,,,,-777,-777,,,,,
-DmstcAbuse,0,1,3 - Medium,,,,,0.3%,0.10%,,,,,
-DsmssdCrt,1,0,3 - Medium,,,,,-777,-777,,,,,
-DsmssdPrsctr,1,0,3 - Medium,,,,,-777,-777,,,,,
-FelDispo180,1,0,3 - Medium,yes,,,,11.7%,22.7%,,,,,
-Indigent,0,1,3 - Medium,,,,,57.1%,76.10%,,,,,
-MisdDispo90,1,0,3 - Medium,yes,,,,7.7%,12.20%,,,,,
-SxOffns,0,1,3 - Medium,yes,,,,0.30%,0.10%,,,,,
-TopCnvctnChrgFelMisdVNV,2,0,3 - Medium,yes,Fixup,,,3.6%,12.20%,,,,,
-TopCnvctnDrgDstrbtnType,0,1,3 - Medium,,,,,4.6%,11.30%,,,,,
-TopCnvctnDrgOffns,0,1,3 - Medium,,,,,4.2%,11.30%,,,,,
-TopCnvctnDrgPssessn,2,0,3 - Medium,,,,,4.2%,11.3%,,,,,
-TopCnvctnDrgPssssnType,0,1,3 - Medium,,,,,0.10%,0.10%,,,,,
-TopFilingChrgOffns,7,0,3 - Medium,yes,Fixup,,,0.40%,0.40%,,,,,
-TopFilingDrgDstrbtnType,0,1,3 - Medium,,,,,0.80%,1.00%,,,,,
-TopFilingDrgOffns,0,1,3 - Medium,,,,,0.80%,1.00%,,,,,
-TopFilingDrgPssssnType,0,1,3 - Medium,,,,,0.10%,0.10%,,,,,
-TopRfrrdDrgDstrbtnType,0,1,3 - Medium,,,,,3.70%,2.50%,,,,,
-TopRfrrdDrgOffns,0,1,3 - Medium,,,,,2.30%,1.50%,,,,,
-TopRfrrdDrgPssssnType,0,1,3 - Medium,,,,,7.00%,8.40%,,,,,
-AttyType,0,1,4 - Low,,,,,51.1%,74.50%,,,,,
-CnvctnChrgStatus,1,0,4 - Low,,,,,3.5%,12.10%,,,,,
-Gang,0,1,4 - Low,,,,,0.30%,0.10%,,,,,
-GltyAllChrgs,1,0,4 - Low,yes,,,,4.7%,14.1%,,,,,
-VctmAgeGroups,0,1,4 - Low,,,,,-777,-777,,,,,
-VctmChld,0,1,4 - Low,,,,,0.10%,0.00%,,,,,
-VctmDfndntRltnshp,0,1,4 - Low,,,,,-777,-777,,,,,
-VctmRace,0,1,4 - Low,,,,,-777,-777,,,,,
-VctmSex,0,1,4 - Low,,,,,-777,-777,,,,,
+AnyCnvctnChrgNoPrbtn,3,0,2 - High,,Done,,,3.8%,11.50%,11.50%,same,,,TopCnvctnChrg,
+ArrstngAgncy,0,1,2 - High,yes,Done,,,0.20%,0.70%,0.70%,same,,,,
+Cnvctd,6,0,2 - High,,Done,,,0%,NA,0.00%,same,,,CaseDisposition,
+DefAgeGroups,0,1,2 - High,yes,Done,,,0.30%,0.60%,0.60%,same,,,DefAge,
+DefCntyRsdnt,0,1,2 - High,yes,Done,,,#N/A,#N/A,,same,,,DefZip,
+DefRace,0,2,2 - High,yes,Done,,,11.20%,11.20%,11.20%,same,,,,
+DefSex,0,1,2 - High,yes,Done,,,1.10%,1.00%,1.00%,same,,,,
+DysFilingToClsr,6,0,2 - High,,Done,,,8.7%,15.90%,15.90%,Needs to be renamed?,,,"FilingDt,DispoDt",
+CaseYr,7,0,2 - High,,Done,,,0.00%,0%,0.00%,same,,,"FilingDt,RfrrlDt",Is needed for a complete audit
+CVCFlag,4,0,2 - High,,,,,#N/A,#N/A,0.00%,same,,,"AnyFilingChrgVlnt,FilingDt,DispoDt,SntncDt",
+PriorsFlag,6,0,2 - High,,,,,31.3%,41.90%,41.90%,same,,,"Cnvctd,DispoDt",
+ReCnvctnSntncFlag,1,0,2 - High,,,,,#N/A,#N/A,0.00%,same,,,"Cnvctd,DispDt,SntncDt",
+TopCnvctnPblcOrdrOffnsType,0,1,2 - High,,,,,4.2%,11.30%,11.30%,same,,,"TopCnvctnChrgOffns,TopCnvctnChrgOffnsType",
+TopCnvctnPrprtyOffnsType,0,1,2 - High,,,,,4.2%,11.30%,11.30%,same,,,"TopCnvctnChrgOffns,TopCnvctnChrgOffnsType",
+TopCnvctnVlntOffnsType,0,1,2 - High,,,,,4.2%,11.30%,11.30%,same,,,"TopCnvctnChrgOffns,TopCnvctnChrgOffnsType",
+TopFilingPblcOrdrOffnsType,0,1,2 - High,,,,,0.80%,1.00%,1.00%,same,,,"TopFilingChrgOffns,TopFilingChrgOffnsType",
+TopFilingPrprtyOffnsType,0,1,2 - High,,,,,0.80%,1.00%,1.00%,same,,,"TopFilingChrgOffns,TopFilingChrgOffnsType",
+TopFilingVlntOffnsType,0,1,2 - High,,,,,0.80%,1.00%,1.00%,same,,,"TopFilingChrgOffns,TopFilingChrgOffnsType",
+TopRfrrdPblcOrdrOffnsType,0,1,2 - High,,,,,2.30%,1.50%,1.50%,same,,,"TopRfrrdChrgOffns,TopRfrrdChrgOffnsType",
+TopRfrrdPrprtyOffnsType,0,1,2 - High,,,,,2.30%,1.50%,1.50%,same,,,"TopRfrrdChrgOffns,TopRfrrdChrgOffnsType",
+TopRfrrdVlntOffnsType,0,1,2 - High,,,,,2.30%,1.50%,1.50%,same,,,"TopRfrrdChrgOffns,TopRfrrdChrgOffnsType",
+CnvctnMthd,0,1,2 - High,,,,,#N/A,#N/A,,,,,"TrialType,Plea",
+ArrestCity,0,1,3 - Medium,,,,,NOTAVAILABLEYET,NOTAVAILABLEYET,,,,,,
+DefHmlss,0,1,3 - Medium,,,,,-777,-777,,,,,DefZip,
+DmstcAbuse,0,1,3 - Medium,,,,,0.3%,0.10%,,,,,,
+DsmssdCrt,1,0,3 - Medium,,,,,-777,-777,,,,,CaseDisposition,
+DsmssdPrsctr,1,0,3 - Medium,,,,,-777,-777,,,,,CaseDisposition,
+FelDispo180,1,0,3 - Medium,yes,,,,11.7%,22.7%,,,,,"DysFilingToClsr,TopFilingChrgFelMisd",
+Indigent,0,1,3 - Medium,,,,,57.1%,76.10%,,,,,,
+MisdDispo90,1,0,3 - Medium,yes,,,,7.7%,12.20%,,,,,"DysFilingToClsr,TopFilingChrgFelMisd",
+SxOffns,0,1,3 - Medium,yes,,,,0.30%,0.10%,,,,,"TopRfrrdChrg,TopFilingChrg,TopCnvctnChrg",
+TopCnvctnChrgFelMisdVNV,2,0,3 - Medium,yes,Fixup,,,3.6%,12.20%,,,,,"TopCnvctnChrgFelMisd,TopCnvctnChrgOffnsType",
+TopCnvctnDrgDstrbtnType,0,1,3 - Medium,,,,,4.6%,11.30%,,,,,TopCnvctnChrgOffns,
+TopCnvctnDrgOffns,0,1,3 - Medium,,,,,4.2%,11.30%,,,,,TopCnvctnChrgOffns,
+TopCnvctnDrgPssessn,2,0,3 - Medium,,,,,4.2%,11.3%,,,,,TopCnvctnChrgOffns,
+TopCnvctnDrgPssssnType,0,1,3 - Medium,,,,,0.10%,0.10%,,,,,TopCnvctnChrgOffns,
+TopFilingChrgOffns,7,0,3 - Medium,yes,Fixup,,,0.40%,0.40%,,,,,TopFilingChrg,
+TopFilingDrgDstrbtnType,0,1,3 - Medium,,,,,0.80%,1.00%,,,,,TopFilingChrgOffns,
+TopFilingDrgOffns,0,1,3 - Medium,,,,,0.80%,1.00%,,,,,TopFilingChrgOffns,
+TopFilingDrgPssssnType,0,1,3 - Medium,,,,,0.10%,0.10%,,,,,TopFilingChrgOffns,
+TopRfrrdDrgDstrbtnType,0,1,3 - Medium,,,,,3.70%,2.50%,,,,,TopRfrrdChrgOffns,
+TopRfrrdDrgOffns,0,1,3 - Medium,,,,,2.30%,1.50%,,,,,TopRfrrdChrgOffns,
+TopRfrrdDrgPssssnType,0,1,3 - Medium,,,,,7.00%,8.40%,,,,,TopRfrrdChrgOffns,
+AttyType,0,1,4 - Low,,,,,51.1%,74.50%,,,,,,
+CnvctnChrgStatus,1,0,4 - Low,,,,,3.5%,12.10%,,,,,"Cnvctd,TopFilingChrgSvrtyOrgnl,TopCnvctnChrgSvrtyOrgnl",
+Gang,0,1,4 - Low,,,,,0.30%,0.10%,,,,,,
+GltyAllChrgs,1,0,4 - Low,yes,,,,4.7%,14.1%,,,,,"TotFiledChrgs,TotGltyChrgs",
+VctmAgeGroups,0,1,4 - Low,,,,,-777,-777,,,,,VctmAge,
+VctmChld,0,1,4 - Low,,,,,0.10%,0.00%,,,,,"VctmAge,TopRfrrdChrg,TopFilingChrg,TopCnvctnChrg",
+VctmDfndntRltnshp,0,1,4 - Low,,,,,-777,-777,,,,,,
+VctmRace,0,1,4 - Low,,,,,-777,-777,,,,,,
+VctmSex,0,1,4 - Low,,,,,-777,-777,,,,,,
