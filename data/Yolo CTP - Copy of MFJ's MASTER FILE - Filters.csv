@@ -266,3 +266,7 @@ DB ID,Expression,Title,Name,State
 96063,ArrestCity=4,Winters,Winters,
 96064,ArrestCity=5,Other,other,
 96079,ArrestCity=6,Unknown City of Arrest,unknown city of arrest,
+,CnvctnMthd=0,Plea Bargain,plea bargain,
+,CnvctnMthd=1,Jury Trial,jury trial,
+,CnvctnMthd=2,Bench Trial,bench trial,
+,CnvctnMthd=-999,Unknown Conviction Method,unknown conviction method,

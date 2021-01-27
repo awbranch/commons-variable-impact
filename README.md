@@ -22,22 +22,23 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 ## TODOs
 
-show / hide details - would display all the text in each data block.
+Add dockerfile so that Charles can publish
+Change origin back to MFJ and push
+
+Add confidence column
+Add Measure Count and Filter Count columns for each variable (e.g. number of measures the variable is used in)
+
+Group main section into 3 columns: Monthly Data | Explorer View | Annual Measures & Filters 
+
+Allow each measure block to be expanded individually as well as entire section
+
+Display dependent variables separate from primary variables in each measure block
+
+Handle @ variables like  @TotDrgHybridCrts in - 118	Performance, Companion: 18	Drug Courts
+
+Live updating:
+ - Get it to read the google sheet directly or 
+ - A move variable status to Clubhouse and have it read from there
+ - When clubhouse integration is in place, have each variable link to their corresponding clubhouse ticket.
 
 filterSubclasses may have variables that depend on other variables.
-Handle @ variables like  @TotDrgHybridCrts in - 118	Performance, Companion: 18	Drug Courts
-Add explore view measures section (by measure group)
-
-Add more columns to the checkboxes: Status, Missing, Priority
-Allow sorting of each column
-
-Initialize checkboxes with those already done variables as a starting place
-Within each group
-   Add the measure id: name
-   Add list all variables mark missing bold or with background dark?
-Publish it to gihub pages
-Get it to read the googlesheet directly alternatily local excel sheet
-
-Checkboxes add
-   Sort/Group: Alpha, Priority (from Variable Progress)
-

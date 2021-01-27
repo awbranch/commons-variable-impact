@@ -111,6 +111,9 @@ MFJCaseNo,De-identified Unique Case ID,N/A,,String,N/A,,MFJ,"(1)AVAILABLE
 (3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
 (2)CA113: AVAILABLE
 (3)CA113: AVAILABLE",1
+CaseRcvd,Case received by District Attorney's Office,NA,NA,Numeric integer,1,Case Received,MFJ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",,
 Mtchng,Whether the case was matched to multiple datasets,N/A,,Numeric integer,0,Not matched,MFJ,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
@@ -10717,7 +10720,7 @@ TrialType,Flag: type of trial in which the case was disposed,type of trial (jury
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Cnvctd,Flag: defendant was convicted of at least one charge,whether defendant was convicted,,Numeric integer,0,No,Court/Prosecutor/Public Defender,"(1)AVAILABLE
+Cnvctd,Flag: defendant was convicted of at least one charge,whether defendant was convicted,whether defendant was convicted,Numeric integer,0,No,Court/Prosecutor/Public Defender,"(1)AVAILABLE
 (2)AVAILABLE
 (3)NOT_AVAILABLE_YET",,"(1)AVAILABLE
 (2)NOT_AVAILABLE_YET
@@ -10759,6 +10762,14 @@ Cnvctd,Flag: defendant was convicted of at least one charge,whether defendant wa
 (2)CA113: AVAILABLE
 (3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+CnvctnMthd,Legal tool used to process the case and reach conviction,whether defendant was convicted via plea bargain or trial,whether defendant was convicted via plea bargain or trial,Numeric integer,0,Plea bargain,Court/Prosecutor/Public Defender,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",
+,,,,,1,Jury trial,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,2,Bench trial,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
