@@ -7746,7 +7746,7 @@ JailStay,Type of admission under which the defendant was booked into jail,,,Nume
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-TotFTA,Total number of failure to appear in court notices,total number of times defendant failed to appear in court,,Numeric integer,N/A,,Court/Public Defender/Jail,"(1)NOT_AVAILABLE_YET
+TotFTA,Total number of failure to appear in court notices,total number of times defendant failed to appear in court,,Numeric integer,N/A,,Court/Public Defender/Prosecutor,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
@@ -7784,7 +7784,7 @@ TotFTA,Total number of failure to appear in court notices,total number of times 
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-FTA,Flag: defendant failed to appear in court at least once,whether defendant failed to appear in any court hearing,,Numeric integer,0,No,Court/Public Defender/Jail,"(1)AVAILABLE
+FTA,Flag: defendant failed to appear in court at least once,whether defendant failed to appear in any court hearing,,Numeric integer,0,No,Court/Public Defender/Prosecutor,"(1)AVAILABLE
 (2)AVAILABLE
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
@@ -7819,7 +7819,9 @@ FTA,Flag: defendant failed to appear in court at least once,whether defendant fa
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

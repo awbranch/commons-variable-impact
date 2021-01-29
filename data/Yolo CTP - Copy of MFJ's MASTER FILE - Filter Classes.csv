@@ -1,5 +1,4 @@
 DB ID,Order,Name,Description,All Filter Title,All Filter Name,Footnotes
 100,1,Unfiltered,Shows all cases for the measure unfiltered.,,,
 101,2,Defendant Characteristics,"Attributes of the defendant such as race, age, sex and indigent status.",,,
-102,3,Victim Characteristics,"Attributes of the victim such as race, age, sex and relationship to the defendant.",,,
 103,4,Case Characteristics,Attributes of the case such as the offense type and severity.,,,
