@@ -25,6 +25,7 @@ CaseStatus,23,0,1 - Highest,,Done,13,12/17/2020,34.60%,17.50%,40.00%,"~40% missi
 OffenseDt,,,1 - Highest,,Done,5,,0.50%,0.50%,0.50%,same,,,,"Least missing
 Implemented in ETL; not checking statutes of limitations yet
 WB 1/11: Yolo will manually fix any remaining issues"
+FTA,6,1,1 - Highest,,,,,,,0.00%,,,,,
 ArrstDt,,,4 - Low,,Done,6,,51.60%,56.20%,0.00%,"""We will use RfrrlDt instead""",,,RfrrdChrgIntlActn,"Yolo thinks this should be reliable, but is really bad.
 WB 1/11: We will drop this and use referral date instead "
 CitationDt,,,,,,,,,,0.00%,"""We will use RfrrlDt instead""",,,RfrrdChrgIntlActn,"See conversation in &yolo_data from 2020-12-22. To be derived from parties_in_case.action_date for certain actions.

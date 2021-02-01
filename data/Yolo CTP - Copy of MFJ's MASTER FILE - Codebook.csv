@@ -4770,7 +4770,9 @@ AnyRfrrdChrgDUIFlag,Flag: at least one referred charge was for DUI,whether any r
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
