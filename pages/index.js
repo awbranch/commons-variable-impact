@@ -515,6 +515,16 @@ export async function getStaticProps() {
         ]
       }]
     })
+
+    if(sections.length > 0 && s['Pie Chart Breakdown Companions'].length > 0) {
+      // Add companions to the last section
+      let lastSection = sections[sections.length - 1]
+      if(lastSection.columns && lastSection.columns.length === 3) {
+        lastSection.columns[0].measures.push(...(s['Pie Chart Breakdown Companions'].split(',').map(v => findMeasureById(v))))
+        lastSection.columns[1].measures.push(...(s['Misdemeanor Companions'].split(',').map(v => findMeasureById(v))))
+        lastSection.columns[2].measures.push(...(s['Felony Companions'].split(',').map(v => findMeasureById(v))))
+      }
+    }
   })
 
   sections.push({
