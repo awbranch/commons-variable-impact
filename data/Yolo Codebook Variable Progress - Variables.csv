@@ -21,7 +21,7 @@ TopSntnc,46,0,1 - Highest,yes,Fixup,8,12/10/2020,5.8%,15.3%,15.30%,same,"WB: has
 TrialType,20,0,1 - Highest,yes,Fixup,9,12/11/2020,21.4%,0.00%,0.00%,same,"WB: has what he needs, implementation needed. ~1day ish",,Trial,"Pulling only from charge outcomes, should add calendar (only two trials currently evidenced in 2020…)"
 DfrrlDvrsn,38,0,1 - Highest,,Fixup,10,12/14/2020,0.0%,0.0%,0.00%,"same, pending new delivery",WB has rules and needs to implement. Get for free from CaseDispo. ~0 effort to fixup.,,Prosecuted,Currently being populated from grants. Needs additional information imported from NHC spreadsheet.
 DvrsnPrgrm,30,1,1 - Highest,,Fixup,12,12/16/2020,81.3%,99.10%,70.00%,"same, pending new delivery","RW will provide rules to WB. We need to reevaluate when we get the next data drop. Risk, if Yolo's fix isn't good, we may have to drop the diversions section from dashboard.",,,Currently being populated from grants. Needs additional information imported from NHC spreadsheet.
-CaseStatus,23,0,1 - Highest,,Done,13,12/17/2020,34.60%,17.50%,40.00%,"~40% missing, pending word on open cases",Seems there are problems with fully identifying pending cases.,Will waiting for rules from Rae,CaseDisposition,
+CaseStatus,23,0,1 - Highest,,Done,13,12/17/2020,34.60%,17.50%,7.50%,"~40% missing, pending word on open cases",Seems there are problems with fully identifying pending cases.,Will waiting for rules from Rae,CaseDisposition,
 OffenseDt,,,1 - Highest,,Done,5,,0.50%,0.50%,0.50%,same,,,,"Least missing
 Implemented in ETL; not checking statutes of limitations yet
 WB 1/11: Yolo will manually fix any remaining issues"
