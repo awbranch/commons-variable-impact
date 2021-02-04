@@ -111,9 +111,11 @@ MFJCaseNo,De-identified Unique Case ID,N/A,,String,N/A,,MFJ,"(1)AVAILABLE
 (3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
 (2)CA113: AVAILABLE
 (3)CA113: AVAILABLE",1
-CaseRcvd,Case received by District Attorney's Office,NA,NA,Numeric integer,1,Case Received,MFJ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)CA113: AVAILABLE
+CaseRcvd,Case received by District Attorney's Office,NA,NA,Numeric integer,1,Case Received,MFJ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)NOT_AVAILABLE_YET
+(2)NOT_AVAILABLE_YET
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
 (2)CA113: AVAILABLE
-(3)CA113: AVAILABLE",,
+(3)CA113: AVAILABLE",
 Mtchng,Whether the case was matched to multiple datasets,N/A,,Numeric integer,0,Not matched,MFJ,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
@@ -2670,6 +2672,9 @@ LastEventDt,Date of last recorded court event,last recorded court event date,,Da
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,0
+SntncEndDt,Date of projected sentence end (sentence date + sentenced imposed length),projected sentenced end date,,Date,N/A,,Court/Prosecutor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)NOT_AVAILABLE_YET
+(2)NOT_AVAILABLE_YET
+(3)NOT_AVAILABLE_YET",,
 PrsnAdmssnDt,Initial prison admission date for a sentence of incarceration,initial prison admission date,,Date,N/A,,DOC,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
@@ -4247,7 +4252,9 @@ TopRfrrdDrgOffns,Drug offense type of most serious referral charge,drug offense 
 ,,,,,3,Distribution/Manufacture,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,4,Other/Unspecified,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Unknown Offense Type,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-TopRfrrdDrgPssssnType,Drug type for most serious referred drug possession charge,drug type for most serious referred drug possession charge,,Numeric integer,0,Non-drug offense,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)CA113: AVAILABLE
+TopRfrrdDrgPssssnType,Drug type for most serious referred drug possession charge,drug type for most serious referred drug possession charge,,Numeric integer,0,Non-drug offense,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)NOT_AVAILABLE_YET
+(2)NOT_AVAILABLE_YET
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
 (2)CA113: AVAILABLE
 (3)CA113: AVAILABLE",
 ,,,,,1,Heroin (includes opioids),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -4258,7 +4265,9 @@ TopRfrrdDrgPssssnType,Drug type for most serious referred drug possession charge
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not Known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-TopRfrrdDrgDstrbtnType,Drug type for most serious referred drug possession charge,drug type for most serious referred drug distribution charge,,Numeric integer,0,Non-drug offense,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)CA113: AVAILABLE
+TopRfrrdDrgDstrbtnType,Drug type for most serious referred drug possession charge,drug type for most serious referred drug distribution charge,,Numeric integer,0,Non-drug offense,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)NOT_AVAILABLE_YET
+(2)NOT_AVAILABLE_YET
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
 (2)CA113: AVAILABLE
 (3)CA113: AVAILABLE",
 ,,,,,1,Heroin (includes opioids),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -5502,7 +5511,9 @@ TopFilingDrgOffns,Drug offense type of most serious charge filed by prosecutor,d
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not Known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-TopFilingDrgPssssnType,Drug type for most serious drug possession charge filed by prosecutor,drug type for most serious drug possession charge filed by prosecutor,,Numeric integer,0,Non-drug offense,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)CA113: AVAILABLE
+TopFilingDrgPssssnType,Drug type for most serious drug possession charge filed by prosecutor,drug type for most serious drug possession charge filed by prosecutor,,Numeric integer,0,Non-drug offense,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)NOT_AVAILABLE_YET
+(2)NOT_AVAILABLE_YET
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
 (2)CA113: AVAILABLE
 (3)CA113: AVAILABLE",
 ,,,,,1,Heroin (includes opioids),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -5513,7 +5524,9 @@ TopFilingDrgPssssnType,Drug type for most serious drug possession charge filed b
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not Known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-TopFilingDrgDstrbtnType,Drug type for most serious drug distribution charge filed by the prosecutor,drug type for most serious drug distribution charge filed by the prosecutor,,Numeric integer,0,Non-drug offense,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)CA113: AVAILABLE
+TopFilingDrgDstrbtnType,Drug type for most serious drug distribution charge filed by the prosecutor,drug type for most serious drug distribution charge filed by the prosecutor,,Numeric integer,0,Non-drug offense,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)NOT_AVAILABLE_YET
+(2)NOT_AVAILABLE_YET
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
 (2)CA113: AVAILABLE
 (3)CA113: AVAILABLE",
 ,,,,,1,Heroin (includes opioids),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -8706,7 +8719,9 @@ TopCnvctnDrgOffns,Drug offfense type of most serious charge for which defendant 
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not Known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-TopCnvctnDrgPssssnType,Drug type for most serious drug possession charge for which the defendant was convicted,drug type for most serious drug possession conviction charge,,Numeric integer,0,Non-drug offense,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)CA113: AVAILABLE
+TopCnvctnDrgPssssnType,Drug type for most serious drug possession charge for which the defendant was convicted,drug type for most serious drug possession conviction charge,,Numeric integer,0,Non-drug offense,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)NOT_AVAILABLE_YET
+(2)NOT_AVAILABLE_YET
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
 (2)CA113: AVAILABLE
 (3)CA113: AVAILABLE",
 ,,,,,1,Heroin (includes opioids),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -8717,7 +8732,9 @@ TopCnvctnDrgPssssnType,Drug type for most serious drug possession charge for whi
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not Known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-TopCnvctnDrgDstrbtnType,Drug type for most serious drug distribution charge for which the defendant was convicted,drug type for most serious drug possession conviction charge,,Numeric integer,0,Non-drug offense,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)CA113: AVAILABLE
+TopCnvctnDrgDstrbtnType,Drug type for most serious drug distribution charge for which the defendant was convicted,drug type for most serious drug possession conviction charge,,Numeric integer,0,Non-drug offense,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)NOT_AVAILABLE_YET
+(2)NOT_AVAILABLE_YET
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
 (2)CA113: AVAILABLE
 (3)CA113: AVAILABLE",
 ,,,,,1,Heroin (includes opioids),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -10043,7 +10060,9 @@ DfrrlDvrsn,"Flag: case involved deferred prosecution or pretrial diversion (incl
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-DvrsnPrgrm,Diversion program the defendant enrolled in,diversion program,Diversion Program,Numeric integer,1,Neighborhood Court,Court/Prosecutor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)CA113: AVAILABLE
+DvrsnPrgrm,Diversion program the defendant enrolled in,diversion program,Diversion Program,Numeric integer,1,Neighborhood Court,Court/Prosecutor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)NOT_AVAILABLE_YET
+(2)NOT_AVAILABLE_YET
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
 (2)CA113: AVAILABLE
 (3)CA113: AVAILABLE",
 ,,,,,2,Mental Health Court,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -10717,7 +10736,9 @@ Trial,Flag: case disposed of at trial,whether case was disposed of at trial,,Num
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-TrialType,Flag: type of trial in which the case was disposed,type of trial (jury or bench) where case was disposed,,Numeric,0,Jury trial,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)CA113: AVAILABLE
+TrialType,Flag: type of trial in which the case was disposed,type of trial (jury or bench) where case was disposed,,Numeric,0,Jury trial,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)NOT_AVAILABLE_YET
+(2)NOT_AVAILABLE_YET
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
 (2)CA113: AVAILABLE
 (3)CA113: AVAILABLE",
 ,,,,,1,Bench trial,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -10769,7 +10790,9 @@ Cnvctd,Flag: defendant was convicted of at least one charge,whether defendant wa
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-CnvctnMthd,Legal tool used to process the case and reach conviction,whether defendant was convicted via plea bargain or trial,whether defendant was convicted via plea bargain or trial,Numeric integer,0,Plea bargain,Court/Prosecutor/Public Defender,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)CA113: AVAILABLE
+CnvctnMthd,Legal tool used to process the case and reach conviction,whether defendant was convicted via plea bargain or trial,whether defendant was convicted via plea bargain or trial,Numeric integer,0,Plea bargain,Court/Prosecutor/Public Defender,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)NOT_AVAILABLE_YET
+(2)NOT_AVAILABLE_YET
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
 (2)CA113: AVAILABLE
 (3)CA113: AVAILABLE",
 ,,,,,1,Jury trial,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
