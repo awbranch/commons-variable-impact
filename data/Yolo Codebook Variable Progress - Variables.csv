@@ -1,43 +1,44 @@
-Variable,Measure Count,Filter Count,Priority,Low Hanging Fruit,Status*,Implementation  Order,Target Delivery Date - Best Case,Missing 2019,Missing 2020,Current Missingness Forecast,1/21/21 Missingness Forecast Notes,Current Status,,Depends On Variable,Notes
+Variable,Measure Count,Filter Count,Priority,Low Hanging Fruit,Status*,Implementation  Order,Target Delivery Date - Best Case,Missing 2019,Missing 2020,Current Missingness Forecast (2020),1/21/21 Missingness Forecast Notes,Current Status,,Depends On Variable,Notes
 DysArrgnmtToClsr,8,0,1 - Highest,,Done,,,80.8%,91.60%,16.00%,,,,"IntApprncDt,DispoDt",
 DysRfrrlToFiling,6,0,1 - Highest,,Done,,,,,0.70%,,,,"RfrrlDt,FilingDt,Prosecuted",
-DysFilingToIntApprnc,6,0,1 - Highest,,Done,,,63.10%,75.60%,1.00%,,,,"FilingDt,IntApprncDt,Prosecuted",
+DysFilingToIntApprnc,6,0,1 - Highest,,Done,,,63.10%,75.60%,0.70%,,,,"FilingDt,IntApprncDt,Prosecuted",
 DysOffnsToRfrrl,6,0,1 - Highest,,Done,,,,,0.50%,,,,"OffenseDt,RfrrlDt",
-DysOffnsToClsr,6,0,1 - Highest,,Done,,,9.2%,17.00%,16.00%,,,,"OffenseDt,DispoDt,CaseDisposition",
+DysOffnsToClsr,6,0,1 - Highest,,Done,,,9.2%,17.00%,5.60%,,,,"OffenseDt,DispoDt,CaseDisposition",
 CaseRcvd,1,0,1 - Highest,,Done,,,,,0.00%,,,,,"This is a constant=1 for all rows in the final dataset. There is no known ""unknown."""
-Prosecuted,110,0,1 - Highest,yes,Done,1,11/30/2020,0.20%,0.10%,0.10%,same,WB: have what he needs. Just needs to implement. 1 hr effort.,,CaseDisposition,Does not implement all checks/inferences in syntax.
+Prosecuted,110,0,1 - Highest,yes,Done,1,11/30/2020,0.20%,0.10%,0.10%,same,WB: done,,CaseDisposition,Does not implement all checks/inferences in syntax.
 TopRfrrdChrgFelMisd,68,1,1 - Highest,yes,Done,2,12/1/2020,0.40%,0.30%,0.30%,same,,,TopRfrrdChrgSvrtyOrgnl,
 TopRfrrdChrgOffnsType,42,7,1 - Highest,yes,Done,3,12/2/2020,2.30%,1.50%,1.50%,same,,,TopRfrrdChrgOffns,
 TopFilingChrgFelMisd,52,1,1 - Highest,yes,Done,4,12/4/2020,0.30%,0.30%,0.30%,same,,,TopFilingChrgSvrtyOrgnl,
 TopFilingChrgOffnsType,0,3,1 - Highest,yes,Done,5,12/7/2020,0.80%,1.00%,1.00%,same,,,TopFilingChrgOffns,
 TopCnvctnChrgFelMisd,23,1,1 - Highest,yes,Done,6,12/8/2020,3.6%,12.20%,12.00%,same,,,TopCnvctnChrgSvrtyOrgnl,
 TopCnvctnChrgOffnsType,0,3,1 - Highest,yes,Done,7,12/9/2020,4.2%,11.30%,11.00%,same,,,TopCnvctnChrgOffns,
-CaseDisposition,47,0,1 - Highest,,Fixup,11,12/15/2020,86.6%,52.70%,7.50%,"~40% missing, pending word on open cases",Shazmeena fixing manually. WB needs to implement rule changes which get missingness down to ~25%,Will getting existing rules from Rae to implement - This is the hardest to provide the rules,"DfrrlDvrsn,Prosecuted","Output is currently untrustworthy, mismatches lots of other case variables. Not checked against syntax yet.
+CaseDisposition,47,0,1 - Highest,,Fixup,11,12/15/2020,86.6%,52.70%,4.90%,"~40% missing, pending word on open cases","Shazmeena fixing manually. WB needs to implement rule changes which get missingness down to ~25%
+WB: Probably the hardest of the ones remaining. WB working on it now.",Will getting existing rules from Rae to implement - This is the hardest to provide the rules,"DfrrlDvrsn,Prosecuted","Output is currently untrustworthy, mismatches lots of other case variables. Not checked against syntax yet.
 
 "
-TopSntnc,46,0,1 - Highest,yes,Fixup,8,12/10/2020,5.8%,15.3%,15.30%,same,"WB: has what he needs, implementation needed. ~1day ish",,CaseDisposition,"Pulling from calendar; should add outcome terms
+TopSntnc,46,0,1 - Highest,yes,Done,8,12/10/2020,5.8%,15.3%,15.30%,same,WB: Done,,CaseDisposition,"Pulling from calendar; should add outcome terms
 
 1.26.2021: This variable depends on CaseDisposition and intermediate flags after collapse."
-TrialType,20,0,1 - Highest,yes,Fixup,9,12/11/2020,21.4%,0.00%,0.00%,same,"WB: has what he needs, implementation needed. ~1day ish",,Trial,"Pulling only from charge outcomes, should add calendar (only two trials currently evidenced in 2020…)"
+TrialType,20,0,1 - Highest,yes,Done,9,12/11/2020,21.4%,0.00%,0.00%,same,"WB: has what he needs, implementation needed. ~1day ish",,Trial,"Pulling only from charge outcomes, should add calendar (only two trials currently evidenced in 2020…)"
 DfrrlDvrsn,38,0,1 - Highest,,Fixup,10,12/14/2020,0.0%,0.0%,0.00%,"same, pending new delivery",WB has rules and needs to implement. Get for free from CaseDispo. ~0 effort to fixup.,,Prosecuted,Currently being populated from grants. Needs additional information imported from NHC spreadsheet.
-DvrsnPrgrm,30,1,1 - Highest,,Fixup,12,12/16/2020,81.3%,99.10%,70.00%,"same, pending new delivery","RW will provide rules to WB. We need to reevaluate when we get the next data drop. Risk, if Yolo's fix isn't good, we may have to drop the diversions section from dashboard.",,,Currently being populated from grants. Needs additional information imported from NHC spreadsheet.
+DvrsnPrgrm,30,1,1 - Highest,,Fixup,12,12/16/2020,81.3%,99.10%,17.00%,"same, pending new delivery","RW will provide rules to WB. We need to reevaluate when we get the next data drop. Risk, if Yolo's fix isn't good, we may have to drop the diversions section from dashboard.",,,Currently being populated from grants. Needs additional information imported from NHC spreadsheet.
 CaseStatus,23,0,1 - Highest,,Done,13,12/17/2020,34.60%,17.50%,7.50%,"~40% missing, pending word on open cases",Seems there are problems with fully identifying pending cases.,Will waiting for rules from Rae,CaseDisposition,
 OffenseDt,,,1 - Highest,,Done,5,,0.50%,0.50%,0.50%,same,,,,"Least missing
 Implemented in ETL; not checking statutes of limitations yet
 WB 1/11: Yolo will manually fix any remaining issues"
-FTA,6,1,1 - Highest,,,,,,,0.00%,,RW: needs to provide WB the rule which is fairly simple. Effort to implement ~1 day ish.,,,
+FTA,6,1,1 - Highest,,Fixup,,,,,0.00%,,DK: Done,,,
 RfrrlDt,,,1 - Highest,,Done,1,,0.20%,0.00%,0.00%,"same, pending new delivery",,,,"Non missing
 WB 1/11: Yolo will manually review any remaining issues"
 FilingDt,,,1 - Highest,,Done,3,,13.30%,29.60%,0.70%,pending update from new delivery,Shazmeena is done fixing this. Will get in our next data delivery.,,Prosecuted,"Non missing
 WB 1/11: We are awaiting a rule from Yolo"
-IntApprncDt,,,1 - Highest,,Done,2,,53.30%,77.90%,1.00%,"59% 2019, pending new rules from Yolo",RW has new rule that should get missingness down. Get rule to WB to implement. Effort for WB to implement. Unclear effort for WB to implement. Prob not too bad.,,Prosecuted,"The data point they have use seems inaccurate, too late.
+IntApprncDt,,,1 - Highest,,Done,2,,53.30%,77.90%,0.20%,"59% 2019, pending new rules from Yolo",RW has new rule that should get missingness down. Get rule to WB to implement. Effort for WB to implement. Unclear effort for WB to implement. Prob not too bad.,,Prosecuted,"The data point they have use seems inaccurate, too late.
 WB 1/11: Yolo is looking into this. It is a problem on their end"
-DfrrlOrdrDt,,,1 - Highest,,,,,NOTAVAILABLEYET,NOTAVAILABLEYET,11.00%,"roughly 73%, pending new rules from Yolo","RW will provide rules to WB. We need to reevaluate when we get the next data drop. Risk, if Yolo's fix isn't good, we may have to drop the diversions section from dashboard.",,"Prosecuted,DfrrlDvrsn","This is not something that is readily available in LawSuite, so we'll need to create it based on the work Liz is doing on the diversions spreadsheet.
+DfrrlOrdrDt,,,1 - Highest,,,,,NOTAVAILABLEYET,NOTAVAILABLEYET,17.00%,"roughly 73%, pending new rules from Yolo","RW We need to reevaluate when we get the next data drop. Risk, if Yolo's fix isn't good, we may have to drop the diversions section from dashboard.",,"Prosecuted,DfrrlDvrsn","This is not something that is readily available in LawSuite, so we'll need to create it based on the work Liz is doing on the diversions spreadsheet.
 WB 1/11: Proxy Dates, Engagement, Acceptance, Offer Dates
 The sheet is based on data delivery in August. 
 Another batch for Aug to December. Has LawSuite been fixed for 2021?
 Data gets better more recently so may not be an issue going forward."
-DispoDt,,,1 - Highest,,Fixup,4,,65.70%,93.30%,16.00%,"about 40% for 2019-20, pending new declination work","RW got new rules Friday and today from Ryan. History file should reduce missingness down to close to 0%. Not too bad in Kotlin to pull them from the history file. When will we know that this rule works. WB, end of day tomorrow.",Rae evaluating new rules from RC,CaseDisposition,"Missing, not reliable and coming from multiple sources. Trying to get from charge except when not closed out.
+DispoDt,,,1 - Highest,,Fixup,4,,65.70%,93.30%,5.60%,"about 40% for 2019-20, pending new declination work","RW got new rules Friday and today from Ryan. History file should reduce missingness down to close to 0%. Not too bad in Kotlin to pull them from the history file. When will we know that this rule works. WB, end of day tomorrow.",Rae evaluating new rules from RC,CaseDisposition,"Missing, not reliable and coming from multiple sources. Trying to get from charge except when not closed out.
 WB 1/11: We know where a lot of problems are and are awating a rule. Having a follow up meeting with Ryan today to address."
 SntncDt,,,1 - Highest,,Done,2,,100.00%,100.00%,1.00%,<1%,WB: Done!,Rae evaluating new rules from RC,TopSntnc,"Yolo approved use of court date for this.
 WB 1/11: We know where a lot of problems are and are awating a rule. Having a follow up meeting with Ryan today to address."

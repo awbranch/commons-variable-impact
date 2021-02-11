@@ -1,7 +1,7 @@
 DB ID,Filter Class,Order,Comments (for readability only),Name,Description,Footnotes
 100,100,1,,All Cases,,
 101,101,1,Defendant Characteristics,Race,All,
-102,101,2,Defendant Characteristics,Race,White v People of Color,
+102,101,2,Defendant Characteristics,Race,White | People of Color,
 103,101,3,Defendant Characteristics,Sex,,
 104,101,4,Defendant Characteristics,Indigent Status,,
 105,101,5,Defendant Characteristics,Age,,

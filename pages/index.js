@@ -6,10 +6,12 @@ import path from 'path'
 import csv from 'csvtojson'
 import { unique, parseVariablesFromExp, parseMeasureGroups} from '../src/utils.js'
 
+const MISSINGNESS_CUTOFF = 0.1;
+
 export default function Home({ variables, sections }) {
 
   const [varAvail, setVarAvail] = useState(variables.reduce((a, v) => {
-    a[v.name] = (v.status === 'Done' && v.missing !== null && v.missing < 0.3)
+    a[v.name] = (v.status === 'Done')
     return a
   }, {}))
 
@@ -33,7 +35,7 @@ export default function Home({ variables, sections }) {
 
   const resetVars = () => {
     setVarAvail(variables.reduce((a, v) => {
-      a[v.name] = (v.status === 'Done' && v.missing !== null && v.missing < 0.3)
+      a[v.name] = (v.status === 'Done' && v.missing !== null && v.missing < MISSINGNESS_CUTOFF)
       return a
     }, {}))
   }
@@ -78,7 +80,7 @@ export default function Home({ variables, sections }) {
         : (a, b) => compareMissing(b, a)
       )
     } else if(field === 'status') {
-      return variables.sort(direction === 'ascending'
+      variables.sort(direction === 'ascending'
         ? (a, b) => compareStatus(a, b)
         : (a, b) => compareStatus(b, a)
       )
@@ -157,7 +159,7 @@ export default function Home({ variables, sections }) {
                   <tr key={v.name} onClick={() => updateVarAvail(v.name)}>
                     <td><CheckBox key={v.name} id={v.name} variable={v} checked={varAvail[v.name]} /></td>
                     <td>{v.priority}</td>
-                    <td><span className={(v.missing >= 0.3 || v.missing === null) ? styles.missingVar : undefined}>{v.missing !== null ? (v.missing * 100).toFixed(2)+'%' : 'N/A'}</span></td>
+                    <td><span className={(v.missing >= MISSINGNESS_CUTOFF || v.missing === null) ? styles.missingVar : undefined}>{v.missing !== null ? (v.missing * 100).toFixed(2)+'%' : 'N/A'}</span></td>
                     <td>{v.status}</td>
                   </tr>
                 )
@@ -374,7 +376,7 @@ export async function getStaticProps() {
     } else {
       v.status = p['Status*']
       v.priority = parseInt(p['Priority'])
-      v.missing = p['Current Missingness Forecast'] ? parseFloat(p['Current Missingness Forecast']) / 100 : null
+      v.missing = p['Current Missingness Forecast (2020)'] ? parseFloat(p['Current Missingness Forecast (2020)']) / 100 : null
 
       let dependsOn  = [...(p['Depends On Variable'].split(',').map(v => v.trim()))]
       dependsOn.forEach(d => {

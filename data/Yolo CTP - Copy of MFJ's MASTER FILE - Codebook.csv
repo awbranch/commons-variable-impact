@@ -116,6 +116,9 @@ CaseRcvd,Case received by District Attorney's Office,NA,NA,Numeric integer,1,Cas
 (3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
 (2)CA113: AVAILABLE
 (3)CA113: AVAILABLE",
+,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,-888,Not applicable ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Mtchng,Whether the case was matched to multiple datasets,N/A,,Numeric integer,0,Not matched,MFJ,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
@@ -7799,7 +7802,7 @@ TotFTA,Total number of failure to appear in court notices,total number of times 
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-FTA,Flag: defendant failed to appear in court at least once,whether defendant failed to appear in any court hearing,,Numeric integer,0,No,Court/Public Defender/Prosecutor,"(1)AVAILABLE
+FTA,Flag: defendant failed to appear in court at least once,whether defendant failed to appear to at least one court hearing,,Numeric integer,0,No,Court/Public Defender/Prosecutor,"(1)AVAILABLE
 (2)AVAILABLE
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
@@ -7837,6 +7840,15 @@ FTA,Flag: defendant failed to appear in court at least once,whether defendant fa
 (3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
 (2)CA113: AVAILABLE
 (3)CA113: AVAILABLE",1
+,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+NoApprnc,Flag: no arraignment was held on the case (including instances of defendant's failure to appear and continuance of arraignment),whether an initial appearance took place in the case,,Numeric integer,0,No,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)NOT_AVAILABLE_YET
+(2)NOT_AVAILABLE_YET
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -7918,6 +7930,15 @@ Inactive,Flag: case had language indicating that the case was inactive at any po
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Pending,Flag: case is currently pending disposition,whether the case is currently still open,,Numeric integer,0,Not pending,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)NOT_AVAILABLE_YET
+(2)NOT_AVAILABLE_YET
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",
+,,,,,1,Pending Filing Decision,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,2,Pending Post-filing Disposition,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 BndMotion,Flag: at least one bond motion was filed in case,whether a bond motion was filed,,Numeric integer,0,No,Court/Prosecutor/Public Defender,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
