@@ -16,7 +16,7 @@ CaseDisposition,47,0,1 - Highest,,Fixup,11,12/15/2020,86.6%,52.70%,4.90%,"~40% m
 WB: Probably the hardest of the ones remaining. WB working on it now.",Will getting existing rules from Rae to implement - This is the hardest to provide the rules,"DfrrlDvrsn,Prosecuted","Output is currently untrustworthy, mismatches lots of other case variables. Not checked against syntax yet.
 
 "
-TopSntnc,46,0,1 - Highest,yes,Done,8,12/10/2020,5.8%,15.3%,15.30%,same,WB: Done,,CaseDisposition,"Pulling from calendar; should add outcome terms
+TopSntnc,46,0,1 - Highest,yes,Done,8,12/10/2020,5.8%,15.3%,0.60%,same,WB: Done,,CaseDisposition,"Pulling from calendar; should add outcome terms
 
 1.26.2021: This variable depends on CaseDisposition and intermediate flags after collapse."
 TrialType,20,0,1 - Highest,yes,Done,9,12/11/2020,21.4%,0.00%,0.00%,same,"WB: has what he needs, implementation needed. ~1day ish",,Trial,"Pulling only from charge outcomes, should add calendar (only two trials currently evidenced in 2020…)"
@@ -26,14 +26,14 @@ CaseStatus,23,0,1 - Highest,,Done,13,12/17/2020,34.60%,17.50%,7.50%,"~40% missin
 OffenseDt,,,1 - Highest,,Done,5,,0.50%,0.50%,0.50%,same,,,,"Least missing
 Implemented in ETL; not checking statutes of limitations yet
 WB 1/11: Yolo will manually fix any remaining issues"
-FTA,6,1,1 - Highest,,Fixup,,,,,0.00%,,DK: Done,,,
+FTA,6,1,1 - Highest,,Done,,,,,0.00%,,DK: Done,,,
 RfrrlDt,,,1 - Highest,,Done,1,,0.20%,0.00%,0.00%,"same, pending new delivery",,,,"Non missing
 WB 1/11: Yolo will manually review any remaining issues"
 FilingDt,,,1 - Highest,,Done,3,,13.30%,29.60%,0.70%,pending update from new delivery,Shazmeena is done fixing this. Will get in our next data delivery.,,Prosecuted,"Non missing
 WB 1/11: We are awaiting a rule from Yolo"
 IntApprncDt,,,1 - Highest,,Done,2,,53.30%,77.90%,0.20%,"59% 2019, pending new rules from Yolo",RW has new rule that should get missingness down. Get rule to WB to implement. Effort for WB to implement. Unclear effort for WB to implement. Prob not too bad.,,Prosecuted,"The data point they have use seems inaccurate, too late.
 WB 1/11: Yolo is looking into this. It is a problem on their end"
-DfrrlOrdrDt,,,1 - Highest,,,,,NOTAVAILABLEYET,NOTAVAILABLEYET,17.00%,"roughly 73%, pending new rules from Yolo","RW We need to reevaluate when we get the next data drop. Risk, if Yolo's fix isn't good, we may have to drop the diversions section from dashboard.",,"Prosecuted,DfrrlDvrsn","This is not something that is readily available in LawSuite, so we'll need to create it based on the work Liz is doing on the diversions spreadsheet.
+DfrrlOrdrDt,,,1 - Highest,,Fixup,,,NOTAVAILABLEYET,NOTAVAILABLEYET,17.00%,"roughly 73%, pending new rules from Yolo","RW We need to reevaluate when we get the next data drop. Risk, if Yolo's fix isn't good, we may have to drop the diversions section from dashboard. DK: Make sure we get this from grants table and that it's part of the diversion process",,"Prosecuted,DfrrlDvrsn","This is not something that is readily available in LawSuite, so we'll need to create it based on the work Liz is doing on the diversions spreadsheet.
 WB 1/11: Proxy Dates, Engagement, Acceptance, Offer Dates
 The sheet is based on data delivery in August. 
 Another batch for Aug to December. Has LawSuite been fixed for 2021?
