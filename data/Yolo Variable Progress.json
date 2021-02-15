@@ -1,0 +1,555 @@
+[
+   {
+      "name": "CVCFlag",
+      "status": "Backlog",
+      "priority": 2,
+      "missingness": "0.00%",
+      "dependsOn": "AnyFilingChrgVlnt,FilingDt,DispoDt,SntncDt"
+   },
+   {
+      "name": "PriorsFlag",
+      "status": "Backlog",
+      "priority": 2,
+      "missingness": "41.90%",
+      "dependsOn": "Cnvctd,DispoDt,SntncDt"
+   },
+   {
+      "name": "ReCnvctnSntncFlag",
+      "status": "Backlog",
+      "priority": 2,
+      "missingness": "0.00%",
+      "dependsOn": "Cnvctd,DispoDt,SntncDt"
+   },
+   {
+      "name": "TopCnvctnPblcOrdrOffnsType",
+      "status": "Backlog",
+      "priority": 2,
+      "missingness": "11.30%",
+      "dependsOn": "TopCnvctnChrgOffns,TopCnvctnChrgOffnsType"
+   },
+   {
+      "name": "TopCnvctnPrprtyOffnsType",
+      "status": "Backlog",
+      "priority": 2,
+      "missingness": "11.30%",
+      "dependsOn": "TopCnvctnChrgOffns,TopCnvctnChrgOffnsType"
+   },
+   {
+      "name": "TopCnvctnVlntOffnsType",
+      "status": "Backlog",
+      "priority": 2,
+      "missingness": "11.30%",
+      "dependsOn": "TopCnvctnChrgOffns,TopCnvctnChrgOffnsType"
+   },
+   {
+      "name": "TopFilingPblcOrdrOffnsType",
+      "status": "Backlog",
+      "priority": 2,
+      "missingness": "1.00%",
+      "dependsOn": "TopFilingChrgOffns,TopFilingChrgOffnsType"
+   },
+   {
+      "name": "TopFilingPrprtyOffnsType",
+      "status": "Backlog",
+      "priority": 2,
+      "missingness": "1.00%",
+      "dependsOn": "TopFilingChrgOffns,TopFilingChrgOffnsType"
+   },
+   {
+      "name": "TopFilingVlntOffnsType",
+      "status": "Backlog",
+      "priority": 2,
+      "missingness": "1.00%",
+      "dependsOn": "TopFilingChrgOffns,TopFilingChrgOffnsType"
+   },
+   {
+      "name": "TopRfrrdPblcOrdrOffnsType",
+      "status": "Backlog",
+      "priority": 2,
+      "missingness": "1.50%",
+      "dependsOn": "TopRfrrdChrgOffns,TopRfrrdChrgOffnsType"
+   },
+   {
+      "name": "TopRfrrdPrprtyOffnsType",
+      "status": "Backlog",
+      "priority": 2,
+      "missingness": "1.50%",
+      "dependsOn": "TopRfrrdChrgOffns,TopRfrrdChrgOffnsType"
+   },
+   {
+      "name": "TopRfrrdVlntOffnsType",
+      "status": "Backlog",
+      "priority": 2,
+      "missingness": "1.50%",
+      "dependsOn": "TopRfrrdChrgOffns,TopRfrrdChrgOffnsType"
+   },
+   {
+      "name": "ArrestCity",
+      "status": "Backlog",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": ""
+   },
+   {
+      "name": "DefHmlss",
+      "status": "Backlog",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": "DefZip"
+   },
+   {
+      "name": "DmstcAbuse",
+      "status": "Backlog",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": "TopRfrrdChrg,TopFilingChrg,TopCnvctnChrg"
+   },
+   {
+      "name": "DsmssdCrt",
+      "status": "Backlog",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": "CaseDisposition"
+   },
+   {
+      "name": "DsmssdPrsctr",
+      "status": "Backlog",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": "CaseDisposition"
+   },
+   {
+      "name": "FelDispo180",
+      "status": "Backlog",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": "DysFilingToClsr,TopFilingChrgFelMisd"
+   },
+   {
+      "name": "Indigent",
+      "status": "Backlog",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": ""
+   },
+   {
+      "name": "MisdDispo90",
+      "status": "Backlog",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": "DysFilingToClsr,TopFilingChrgFelMisd"
+   },
+   {
+      "name": "SxOffns",
+      "status": "Backlog",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": "TopRfrrdChrg,TopFilingChrg,TopCnvctnChrg"
+   },
+   {
+      "name": "TopCnvctnDrgDstrbtnType",
+      "status": "Backlog",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": "TopCnvctnChrgOffns"
+   },
+   {
+      "name": "TopCnvctnDrgOffns",
+      "status": "Backlog",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": "TopCnvctnChrgOffns"
+   },
+   {
+      "name": "TopCnvctnDrgPssessn",
+      "status": "Backlog",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": "TopCnvctnChrgOffns"
+   },
+   {
+      "name": "TopCnvctnDrgPssssnType",
+      "status": "Backlog",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": "TopCnvctnChrgOffns"
+   },
+   {
+      "name": "TopFilingDrgDstrbtnType",
+      "status": "Backlog",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": "TopFilingChrgOffns"
+   },
+   {
+      "name": "TopFilingDrgOffns",
+      "status": "Backlog",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": "TopFilingChrgOffns"
+   },
+   {
+      "name": "TopFilingDrgPssssnType",
+      "status": "Backlog",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": "TopFilingChrgOffns"
+   },
+   {
+      "name": "TopRfrrdDrgDstrbtnType",
+      "status": "Backlog",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": "TopRfrrdChrgOffns"
+   },
+   {
+      "name": "TopRfrrdDrgOffns",
+      "status": "Backlog",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": "TopRfrrdChrgOffns"
+   },
+   {
+      "name": "TopRfrrdDrgPssssnType",
+      "status": "Backlog",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": "TopRfrrdChrgOffns"
+   },
+   {
+      "name": "AttyType",
+      "status": "Backlog",
+      "priority": 4,
+      "missingness": null,
+      "dependsOn": ""
+   },
+   {
+      "name": "CnvctnChrgStatus",
+      "status": "Backlog",
+      "priority": 4,
+      "missingness": null,
+      "dependsOn": "Cnvctd,TopFilingChrgSvrtyOrgnl,TopCnvctnChrgSvrtyOrgnl"
+   },
+   {
+      "name": "Gang",
+      "status": "Backlog",
+      "priority": 4,
+      "missingness": null,
+      "dependsOn": ""
+   },
+   {
+      "name": "GltyAllChrgs",
+      "status": "Backlog",
+      "priority": 4,
+      "missingness": null,
+      "dependsOn": "TotFiledChrgs,TotGltyChrgs"
+   },
+   {
+      "name": "VctmAgeGroups",
+      "status": "Backlog",
+      "priority": 4,
+      "missingness": null,
+      "dependsOn": "VctmAge"
+   },
+   {
+      "name": "VctmChld",
+      "status": "Backlog",
+      "priority": 4,
+      "missingness": null,
+      "dependsOn": "VctmAge,TopRfrrdChrg,TopFilingChrg,TopCnvctnChrg"
+   },
+   {
+      "name": "VctmDfndntRltnshp",
+      "status": "Backlog",
+      "priority": 4,
+      "missingness": null,
+      "dependsOn": ""
+   },
+   {
+      "name": "VctmRace",
+      "status": "Backlog",
+      "priority": 4,
+      "missingness": null,
+      "dependsOn": ""
+   },
+   {
+      "name": "VctmSex",
+      "status": "Backlog",
+      "priority": 4,
+      "missingness": null,
+      "dependsOn": ""
+   },
+   {
+      "name": "CaseDisposition",
+      "status": "In Dev",
+      "priority": 1,
+      "missingness": "4.90%",
+      "dependsOn": "DfrrlDvrsn,Prosecuted"
+   },
+   {
+      "name": "DfrrlDvrsn",
+      "status": "In Dev",
+      "priority": 1,
+      "missingness": "0.00%",
+      "dependsOn": "Prosecuted"
+   },
+   {
+      "name": "DvrsnPrgrm",
+      "status": "In Dev",
+      "priority": 1,
+      "missingness": "17.00%",
+      "dependsOn": ""
+   },
+   {
+      "name": "DfrrlOrdrDt",
+      "status": "In Dev",
+      "priority": 1,
+      "missingness": "17.00%",
+      "dependsOn": "Prosecuted,DfrrlDvrsn"
+   },
+   {
+      "name": "DispoDt",
+      "status": "In Dev",
+      "priority": 1,
+      "missingness": "5.60%",
+      "dependsOn": "CaseDisposition"
+   },
+   {
+      "name": "TopCnvctnChrgFelMisdVNV",
+      "status": "In Dev",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": "TopCnvctnChrgFelMisd,TopCnvctnChrgOffnsType"
+   },
+   {
+      "name": "TopFilingChrgOffns",
+      "status": "In Dev",
+      "priority": 3,
+      "missingness": null,
+      "dependsOn": "TopFilingChrg"
+   },
+   {
+      "name": "DysArrgnmtToClsr",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "16.00%",
+      "dependsOn": "IntApprncDt,DispoDt"
+   },
+   {
+      "name": "DysRfrrlToFiling",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "0.70%",
+      "dependsOn": "RfrrlDt,FilingDt,Prosecuted"
+   },
+   {
+      "name": "DysFilingToIntApprnc",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "0.70%",
+      "dependsOn": "FilingDt,IntApprncDt,Prosecuted"
+   },
+   {
+      "name": "DysOffnsToRfrrl",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "0.50%",
+      "dependsOn": "OffenseDt,RfrrlDt"
+   },
+   {
+      "name": "DysOffnsToClsr",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "5.60%",
+      "dependsOn": "OffenseDt,DispoDt,CaseDisposition"
+   },
+   {
+      "name": "CaseRcvd",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "0.00%",
+      "dependsOn": ""
+   },
+   {
+      "name": "Prosecuted",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "0.10%",
+      "dependsOn": "CaseDisposition"
+   },
+   {
+      "name": "TopRfrrdChrgFelMisd",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "0.30%",
+      "dependsOn": "TopRfrrdChrgSvrtyOrgnl"
+   },
+   {
+      "name": "TopRfrrdChrgOffnsType",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "1.50%",
+      "dependsOn": "TopRfrrdChrgOffns"
+   },
+   {
+      "name": "TopFilingChrgFelMisd",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "0.30%",
+      "dependsOn": "TopFilingChrgSvrtyOrgnl"
+   },
+   {
+      "name": "TopFilingChrgOffnsType",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "1.00%",
+      "dependsOn": "TopFilingChrgOffns"
+   },
+   {
+      "name": "TopCnvctnChrgFelMisd",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "12.00%",
+      "dependsOn": "TopCnvctnChrgSvrtyOrgnl"
+   },
+   {
+      "name": "TopCnvctnChrgOffnsType",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "11.00%",
+      "dependsOn": "TopCnvctnChrgOffns"
+   },
+   {
+      "name": "TopSntnc",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "0.60%",
+      "dependsOn": "CaseDisposition"
+   },
+   {
+      "name": "TrialType",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "0.00%",
+      "dependsOn": "Trial"
+   },
+   {
+      "name": "CaseStatus",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "7.50%",
+      "dependsOn": "CaseDisposition"
+   },
+   {
+      "name": "OffenseDt",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "0.50%",
+      "dependsOn": ""
+   },
+   {
+      "name": "FTA",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "0.00%",
+      "dependsOn": ""
+   },
+   {
+      "name": "RfrrlDt",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "0.00%",
+      "dependsOn": ""
+   },
+   {
+      "name": "FilingDt",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "0.70%",
+      "dependsOn": "Prosecuted"
+   },
+   {
+      "name": "IntApprncDt",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "0.20%",
+      "dependsOn": "Prosecuted"
+   },
+   {
+      "name": "SntncDt",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "1.00%",
+      "dependsOn": "TopSntnc"
+   },
+   {
+      "name": "CaseYr",
+      "status": "Audit Ready",
+      "priority": 1,
+      "missingness": "0.00%",
+      "dependsOn": "FilingDt,RfrrlDt"
+   },
+   {
+      "name": "AnyCnvctnChrgNoPrbtn",
+      "status": "Audit Ready",
+      "priority": 2,
+      "missingness": "11.50%",
+      "dependsOn": "TopCnvctnChrg"
+   },
+   {
+      "name": "ArrstngAgncy",
+      "status": "Audit Ready",
+      "priority": 2,
+      "missingness": "0.70%",
+      "dependsOn": ""
+   },
+   {
+      "name": "Cnvctd",
+      "status": "Audit Ready",
+      "priority": 2,
+      "missingness": "0.00%",
+      "dependsOn": "CaseDisposition"
+   },
+   {
+      "name": "DefAgeGroups",
+      "status": "Audit Ready",
+      "priority": 2,
+      "missingness": "0.60%",
+      "dependsOn": "DefAge"
+   },
+   {
+      "name": "DefCntyRsdnt",
+      "status": "Audit Ready",
+      "priority": 2,
+      "missingness": null,
+      "dependsOn": "DefZip"
+   },
+   {
+      "name": "DefRace",
+      "status": "Audit Ready",
+      "priority": 2,
+      "missingness": "11.20%",
+      "dependsOn": ""
+   },
+   {
+      "name": "DefSex",
+      "status": "Audit Ready",
+      "priority": 2,
+      "missingness": "1.00%",
+      "dependsOn": ""
+   },
+   {
+      "name": "DysFilingToClsr",
+      "status": "Audit Ready",
+      "priority": 2,
+      "missingness": "15.90%",
+      "dependsOn": "FilingDt,DispoDt,Prosecuted,CaseDisposition"
+   },
+   {
+      "name": "CnvctnMthd",
+      "status": "Audit Ready",
+      "priority": 2,
+      "missingness": null,
+      "dependsOn": "CaseDisposition,TrialType"
+   }
+]

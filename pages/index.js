@@ -5,13 +5,25 @@ import classNames from 'classnames'
 import path from 'path'
 import csv from 'csvtojson'
 import { unique, parseVariablesFromExp, parseMeasureGroups} from '../src/utils.js'
+import { loadVariableProgress } from '../src/clubhouseConnector.js'
+import fs from 'fs-extra'
 
 const MISSINGNESS_CUTOFF = 0.1;
+const WORKFLOW_STATES = [
+  'Backlog',
+  'Cleaning & Coding',
+  'Dev Ready',
+  'In Dev',
+  'Audit Ready',
+  'In Audit',
+  'QA',
+  'Done',
+]
 
 export default function Home({ variables, sections }) {
 
   const [varAvail, setVarAvail] = useState(variables.reduce((a, v) => {
-    a[v.name] = (v.status === 'Done')
+    a[v.name] = WORKFLOW_STATES.indexOf(v.status) > 3
     return a
   }, {}))
 
@@ -103,15 +115,13 @@ export default function Home({ variables, sections }) {
     return ma === mb ? compareNames(a, b) : ma - mb
   }
 
-  const STATUS_ORDER = ['Done', 'Fixup', '']
-
   const compareStatus = (a, b) => {
     if(a.status === b.status) {
       return compareNames(a, b)
     } else {
-      let ar = STATUS_ORDER.indexOf(a.status)
-      let br = STATUS_ORDER.indexOf(b.status)
-      return ar - br
+      let ar = WORKFLOW_STATES.indexOf(a.status)
+      let br = WORKFLOW_STATES.indexOf(b.status)
+      return br - ar
     }
   }
 
@@ -344,13 +354,15 @@ const DATE_STAGE = {
 export async function getStaticProps() {
 
   const codebook = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Codebook.csv'))
-  const variableProgress  = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo Codebook Variable Progress - Variables.csv'))
   const measureData = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Measures.csv'))
   const caseflowSectionData = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Caseflow Sections.csv'))
   const filterClassesData = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Filter Classes.csv'))
   const filterSubclassesData = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Filter Subclasses.csv'))
   const filterGroupsData = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Filter Groups.csv'))
   const filtersData = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo CTP - Copy of MFJ\'s MASTER FILE - Filters.csv'))
+
+  // const variableProgress  = await csv().fromFile(path.join(process.cwd(), 'data', 'Yolo Codebook Variable Progress - Variables.csv'))
+  const variableProgress = await fs.readJson(path.join(process.cwd(), 'data', 'Yolo Variable Progress.json'))
 
   // Create a master map of variables
   const variables = codebook.reduce((a, v) => {
@@ -369,16 +381,16 @@ export async function getStaticProps() {
 
   // Add the progress to each variable
   variableProgress.forEach(p => {
-    let name = p['Variable']
+    let name = p.name
     let v = variables[name]
     if(!v) {
       console.error(`Progress Variable: ${name} not found in codebook`)
     } else {
-      v.status = p['Status*']
-      v.priority = parseInt(p['Priority'])
-      v.missing = p['Current Missingness Forecast (2020)'] ? parseFloat(p['Current Missingness Forecast (2020)']) / 100 : null
+      v.status = p.status
+      v.priority = p.priority
+      v.missing = p.missingness ? parseFloat(p.missingness) / 100 : null
 
-      let dependsOn  = [...(p['Depends On Variable'].split(',').map(v => v.trim()))]
+      let dependsOn  = [...(p.dependsOn.split(',').map(v => v.trim()))]
       dependsOn.forEach(d => {
         if(d.length > 0) {
           if(!variables[d]) {
