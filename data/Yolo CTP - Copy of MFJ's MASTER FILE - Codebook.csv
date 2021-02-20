@@ -195,7 +195,9 @@ State,State,state where case was processed,,Numeric integer,01,Alabama,MFJ,"(1)A
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,02,Alaska,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,03,Arizona,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
  ,,,,,04,Arkansas,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -284,7 +286,9 @@ JdclDstrct,Judicial District (numeric ID within state),judicial district where c
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,0
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",0
 JdclDstrctID,Unique judicial district ID across states,judicial district where case was processed,,Numeric integer,See Judicial District Codes,,MFJ,"(1)AVAILABLE
 (2)AVAILABLE
 (3)NOT_AVAILABLE_YET",,"(1)AVAILABLE
@@ -323,7 +327,9 @@ JdclDstrctID,Unique judicial district ID across states,judicial district where c
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 countyName,County Name,county where case was processed,,Numeric integer,See County Codes,,Court/Prosecutor,"(1)AVAILABLE
 (2)AVAILABLE
 (3)NOT_AVAILABLE_YET",,"(1)AVAILABLE
@@ -362,7 +368,9 @@ countyName,County Name,county where case was processed,,Numeric integer,See Coun
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,0
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",0
 CountyID,Unique county ID,county where case was processed,,Numeric integer,See County Codes,,MFJ,"(1)AVAILABLE
 (2)AVAILABLE
 (3)NOT_AVAILABLE_YET",,"(1)AVAILABLE
@@ -401,7 +409,9 @@ CountyID,Unique county ID,county where case was processed,,Numeric integer,See C
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 FIPS,County five-digit FIPS from Census,FIPS of county where case was processed,,Numeric integer,See County Codes,,Census Bureau,"(1)AVAILABLE
 (2)AVAILABLE
 (3)NOT_AVAILABLE_YET",,"(1)AVAILABLE
@@ -440,7 +450,9 @@ FIPS,County five-digit FIPS from Census,FIPS of county where case was processed,
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 CourtType,Trial court type (only applies to two-tiered court systems),Type of trial court,,Numeric integer,0,"Lower trial court (misdemeanors, sometimes preliminary hearings for felonies)",Court,"(1)AVAILABLE
 (2)AVAILABLE
 (3)NOT_AVAILABLE_YET",,"(1)AVAILABLE
@@ -660,7 +672,9 @@ ArrstYr,Year when the defendant was arrested,year when case was initiated by arr
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not Known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -698,7 +712,9 @@ RfrrlYr,Year when the case was referred to prosecution,year when case was referr
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not Known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -736,7 +752,9 @@ DispoYr,Year when case was disposed of,year when case was disposed of,,Numeric i
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -779,7 +797,9 @@ AttyAssgnmntYr,Year when the attorney assigned the case (includes Case Open Yr f
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -897,7 +917,9 @@ SntncYr,Year when case was sentenced,year when case was sentenced,,Numeric integ
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -939,7 +961,9 @@ CnsrdDt,Date of data extraction,date of data extraction,,Date,N/A,,MFJ,"(1)AVAIL
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 DefAge,Defendant's age at time of case initiation,defendant's age,,Numeric integer,N/A,,Court/Prosecutor/Public Defender/Jail,"(1)AVAILABLE
 (2)AVAILABLE
 (3)NOT_AVAILABLE_YET",,"(1)AVAILABLE
@@ -974,7 +998,9 @@ DefAge,Defendant's age at time of case initiation,defendant's age,,Numeric integ
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 DefAgeGroups,Defendant's age group,defendant's age,,Numeric integer,0,Under 18,Court/Prosecutor/Public Defender/Jail,"(1)AVAILABLE
@@ -1107,7 +1133,9 @@ DefRaceWPOC,Defendant's race white vs. person of color,defendant's race,,Numeric
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Person of Color,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -1295,7 +1323,9 @@ DefState,Defendant's state of residence,defendant's residence state,,Numeric int
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,2,Alaska,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,3,Arizona,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,4,Arkansas,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -1625,7 +1655,9 @@ ArrstDt,Arrest date (initial),arrest date,,Date,N/A,,Court/Prosecutor/Public Def
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ArrstTm,Arrest time (initial arrest),arrest time,,Time,N/A,,Jail/Police,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
@@ -1985,7 +2017,9 @@ AttyAssgmtDt,Attorney assignment date (includes Case Open date for public defend
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 AttyWthdrwlDt,First attorney withdrawal date,first attorney withdrawal date,,Date,N/A,,Court/Public Defender,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
@@ -2451,7 +2485,9 @@ PleaDt,Plea date (last plea),final plea date,,Date,N/A,,Court/Prosecutor,"(1)AVA
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 DispoDt,Disposition date,disposition date,,Date,N/A,,Court/Prosecutor,"(1)AVAILABLE
 (2)AVAILABLE
 (3)NOT_AVAILABLE_YET",,"(1)AVAILABLE
@@ -2674,7 +2710,9 @@ LastEventDt,Date of last recorded court event,last recorded court event date,,Da
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,0
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",0
 SntncEndDt,Date of projected sentence end (sentence date + sentenced imposed length),projected sentenced end date,,Date,N/A,,Court/Prosecutor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,
@@ -2895,7 +2933,9 @@ DysOffnsToArrst,Days from offense to arrest,number of days from offense to arres
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -3138,7 +3178,9 @@ DysArrstToIntApprnc,Days from arrest to initial appearance (or arraignment),numb
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -3376,7 +3418,9 @@ DysArrgnmtToClsr,Days from arraignment to case closure,number of days from arrai
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-DysArrstToFiling,Days from arrest to filing,number of days from arrest to case filing in court,Days Arrest to Filing,Numeric integer,Days,,Court/Prosecutor/Jail/Police,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DysArrstToFiling,Days from arrest to filing,number of days from arrest to case filing in court,Days Arrest to Filing,Numeric integer,Days,,Court/Prosecutor/Jail/Police,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -3902,7 +3946,9 @@ TotRfrrdChrgs,Total number of referred charges,the total number of referred char
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -3941,7 +3987,9 @@ TopRfrrdChrg,Most serious referred charge,the most serious referred charge,,Nume
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 TopRfrrdChrgOffns,Most serious referred offense,the most serious referred charge,,Numeric integer,1,Murder,Court/Prosecutor/Police/Jail/Criminal History,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)AVAILABLE
@@ -3977,7 +4025,9 @@ TopRfrrdChrgOffns,Most serious referred offense,the most serious referred charge
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,2,Unspecified homicide,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,3,Voluntary/nonnegligent manslaughter,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,4,Manslaughter - non-vehicular,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -4362,7 +4412,9 @@ TopRfrrdChrgSvrtyOrgnl,Original severity by class of most serious referred charg
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 TopRfrrdChrgFelMisd,Severity by level of most serious referred charge,the severity of most serious referred charge,Severity,Numeric integer,0,Misdemeanor,Court/Prosecutor/Police/Jail/Criminal History,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)AVAILABLE
@@ -4441,7 +4493,9 @@ TopRfrrdChrgFelMisdVNV,Severity by level and type of most serious referred charg
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Violent misdemeanor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,2,Nonviolent felony,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,3,Violent felony,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -4525,7 +4579,9 @@ AnyRfrrdChrgGn,Flag: at least one referred charge involved a firearm (except hun
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -4565,7 +4621,9 @@ AnyRfrrdChrgBrglry,Flag: at least one referred charge was for burglary,whether a
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -4605,7 +4663,9 @@ AnyRfrrdChrgHtCrm,Flag: at least one referred charge was for a hate crime,whethe
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -4645,7 +4705,9 @@ AnyRfrrdChrgDrg,Flag: at least one referred charge was for a drug offense,whethe
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -4685,7 +4747,9 @@ AnyRfrrdChrgDrgType,Most serious drug offense and type associated with the refer
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Drug paraphernalia related offense,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,2,Other/unspecified drug offense,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,3,Possession/use of unspecified drug,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -4742,7 +4806,9 @@ DUI_TopRfrrdChrg,Flag: most serious referred charge was DUI,whether most serious
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -4824,7 +4890,9 @@ AnyRfrrdChrgTrffc,"Flag: at least one referred charge was for a criminal traffic
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -4864,7 +4932,9 @@ AnyRfrrdChrgDrgDUITrffc,"Flag: at least one referred charge was for a drug offen
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -4984,7 +5054,9 @@ AnyRfrrdChrgMscndct,Flag: at least one referred charge was for police misconduct
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -5024,7 +5096,9 @@ RfrrdRstngArrstOnly,Flag: Resisting arrest was the only referred charge,whether 
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -5064,7 +5138,9 @@ RfrrdDsrdrlyCndctOnly,Flag: Disorderly conduct was the only referred charge,whet
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -5148,7 +5224,9 @@ TotFiledChrgs,Total number of charges filed by prosecutor,total number of charge
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -5190,7 +5268,9 @@ TopFilingChrg,Most serious charge filed by prosecutor,most serious charge filed 
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 TopFilingChrgOffns,Most serious filing offense,most serious charge filed by prosecutor,,Numeric integer,1,Murder,Court/Prosecutor/Public Defender/Jail,"(1)AVAILABLE
 (2)AVAILABLE
 (3)NOT_AVAILABLE_YET",,"(1)AVAILABLE
@@ -5624,7 +5704,9 @@ TopFilingChrgSvrtyOrgnl,Original severity by class of most serious filing charge
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 TopFilingChrgFelMisd,Severity by level of most serious charge filed by prosecutor,the severity of most serious charge filed by prosecutor,Severity,Numeric integer,0,Misdemeanor,Court/Prosecutor/Public Defender/Jail,"(1)AVAILABLE
 (2)AVAILABLE
 (3)NOT_AVAILABLE_YET",,"(1)AVAILABLE
@@ -5708,7 +5790,9 @@ TopFilingChrgFelMisdVNV,Severity level and type of most serious charge filed by 
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Violent misdemeanor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,2,Nonviolent felony,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,3,Violent felony,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -5753,7 +5837,9 @@ AnyFilingChrgVlnt,Flag: at least one charge filed by prosecutor was for a violen
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -5797,7 +5883,9 @@ AnyFilingChrgGn,Flag: at least one charge filed by prosecutor involved a firearm
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -5841,7 +5929,9 @@ AnyFilingChrgBrglry,Flag: at least one charge filed by prosecutor was for burgla
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -5885,7 +5975,9 @@ AnyFilingChrgHtCrm,Flag: at least one charge filed by prosecutor was for a hate 
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -5928,7 +6020,9 @@ AnyFilingChrgDrg,Flag: at least one charge filed by prosecutor was for a drug of
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -5972,7 +6066,9 @@ AnyFilingChrgDrgType,Most serious drug offense and type associated with the fili
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Drug paraphernalia related offense,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,2,Other drug offense,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,3,Possession/use of unspecified drug,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -6032,7 +6128,9 @@ AnyFilingChrgDUIFlag,Flag: at least one charge filed by prosecutor was for DUI,w
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -6075,7 +6173,9 @@ DUI_TopFilingChrg,Flag: most serious charge filed by prosecutor was DUI,whether 
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -6118,7 +6218,9 @@ AnyFilingChrgTrffc,"Flag: at least one charge filed by prosecutor was for a traf
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -6161,7 +6263,9 @@ AnyFilingChrgDrgDUITrffc,"Flag: at least one charge filed by prosecutor was for 
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,0
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",0
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -6318,7 +6422,9 @@ ChrgRdctnRfrrlToFiling,Charge status from referral to filing by prosecutor,wheth
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Charge reduction - lower severity than referral charge,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,2,Charge increase - higher severity than referral charge,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -6362,7 +6468,9 @@ FilingRstngArrstOnly,Flag: resisting arrest was the only charge filed by prosecu
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -6405,7 +6513,9 @@ FilingDsrdrlyCndctOnly,Flag: disorderly conduct was the only charge filed by pro
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -6448,7 +6558,9 @@ DmstcVlnc,Flag: case involved violent domestic abuse,whether case involved viole
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -6579,7 +6691,9 @@ FlrRgstrSxOffndr,Flag: convicted for failing to register as sex offender,whether
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,0
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",0
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -6668,7 +6782,9 @@ GangVlnc,Flag: case involved gang violence,whether case involve gang violence,,N
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -6873,7 +6989,9 @@ PblcDfndr,Flag: the last attorney of record was a public defender,whether last a
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -7592,7 +7710,9 @@ PrtrlRlsNoCntct,Flag: pretrial release conditions included no contact with victi
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -7635,7 +7755,9 @@ NoCntctOrdr,"Flag: at least one no contact or protective order (aka temporary or
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -7887,7 +8009,9 @@ Warrant,Flag: defendant had a bench warrrant or arrest warrant,whether defendant
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -7926,7 +8050,9 @@ Inactive,Flag: case had language indicating that the case was inactive at any po
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -8177,7 +8303,9 @@ Continuance,Flag: at least one continuance was ordered in case,whether a continu
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -8256,7 +8384,9 @@ Plea,Defendant's final plea (includes deferrals),defendant's final plea,,Numeric
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,0
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",0
 ,,,,,1,Guilty/No contest,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,2,Guilty due to deferral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -8297,7 +8427,9 @@ GltyPleaNoAtty,Flag: defendant pleaded guilty without retained or appointed atto
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -8418,7 +8550,9 @@ TopCnvctnChrg,Most serious charge for which defendant was convicted,most serious
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 TopCnvctnChrgOffns,Most serious offense for which the defendant was convicted,most serious conviction charge,,Numeric integer,1,Murder,Court/Prosecutor/Public Defender,"(1)AVAILABLE
 (2)AVAILABLE
 (3)NOT_AVAILABLE_YET",,"(1)AVAILABLE
@@ -8457,7 +8591,9 @@ TopCnvctnChrgOffns,Most serious offense for which the defendant was convicted,mo
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,2,Unspecified homicide,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,3,Voluntary/nonnegligent manslaughter,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,4,Manslaughter - non-vehicular,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -8850,7 +8986,9 @@ TopCnvctnChrgSvrtyOrgnl,Original severity by class of most serious conviction ch
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 TopCnvctnChrgFelMisd,Severity by level of most serious conviction charge,severity of most serious conviction charge,,Numeric integer,0,Misdemeanor,Court/Prosecutor,"(1)AVAILABLE
 (2)AVAILABLE
 (3)NOT_AVAILABLE_YET",,"(1)AVAILABLE
@@ -8981,7 +9119,9 @@ DUI_TopCnvctnChrg,Flag: most serious charge for which defendant was convicted wa
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,0
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",0
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -9024,7 +9164,9 @@ AnyCnvctnChrgVlnt,Flag: at least one conviction charge was for a violent offense
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -9067,7 +9209,9 @@ AnyCnvctnChrgGn,Flag: at least one conviction charge involved a firearm (except 
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -9110,7 +9254,9 @@ AnyCnvctnChrgBrglry,Flag: at least one conviction charge was for burglary,whethe
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -9153,7 +9299,9 @@ AnyCnvctnChrgHtCrm,Flag: at least one conviction charge was for a hate crime,whe
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -9196,7 +9344,9 @@ AnyCnvctnChrgDrg,Flag: at least one conviction charge was for a drug offense,whe
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -9239,7 +9389,9 @@ AnyCnvctnChrgDrgType,Most serious drug offense and type associated with the conv
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Drug paraphernalia related offense,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,2,Other drug offense,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,3,Possession/use of unspecified drug,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -9299,7 +9451,9 @@ AnyCnvctnChrgDUIFlag,Flag: at least one conviction charge was for DUI,whether an
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -9342,7 +9496,9 @@ AnyCnvctnChrgTrffc,"Flag: at least one conviction charge was for a traffic offen
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -9385,7 +9541,9 @@ AnyCnvctnChrgDrgDUITrffc,"Flag: at least one conviction charge was for a drug of
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,0
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",0
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -9590,7 +9748,9 @@ CnvctnRstngArrstOnly,Flag: resisting arrest was the only conviction charge,wheth
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -9633,7 +9793,9 @@ CnvctnDsrdrlyCndctOnly,Flag: disorderly conduct was the only conviction charge,w
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -9721,7 +9883,9 @@ TopDrgTypePssessn,Drug type associated with drug possession top conviction charg
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,2,Amphetamine,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,3,Cocaine/crack cocaine,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,4,Opioid drug,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -9770,7 +9934,9 @@ TopCnvctnDrgDstrbtn,Flag: top conviction charge was drug distribution,whether th
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,0
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",0
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -9813,7 +9979,9 @@ TopCnvctnTheft,Flag: top conviction charge was theft,whether the most serious co
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,0
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",0
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -9902,7 +10070,9 @@ PleaFelToMisd,Flag: defendant pleaded down from initial filing felony charge to 
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -9945,7 +10115,9 @@ TotGltyChrgs,Total number of conviction charges,the total number of conviction c
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -10032,7 +10204,9 @@ RatioChrgs,Ratio of number of filed charges to number of conviction charges,rati
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -10543,9 +10717,7 @@ DsmssdPrsctr,Flag: case was dismissed by the prosecutor,whether case was dismiss
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
-(2)CA113: AVAILABLE
-(3)CA113: AVAILABLE",1
+(3)NOT_AVAILABLE_YET",,1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -10584,9 +10756,7 @@ DsmssdCrt,Case dismissed by the court or on defense's motion,whether case was di
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
-(2)CA113: AVAILABLE
-(3)CA113: AVAILABLE",1
+(3)NOT_AVAILABLE_YET",,1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -10670,7 +10840,9 @@ DclndIntJstc,Flag: any charge declined in the interest of justice,whether any ch
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -10752,7 +10924,9 @@ Trial,Flag: case disposed of at trial,whether case was disposed of at trial,,Num
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -10917,7 +11091,9 @@ Incarceration,Flag: most severe sentence was prison or jail (includes life in pr
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -11074,7 +11250,9 @@ TotLifeSntncs,Total number of life sentences imposed,number of life sentences im
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -11150,9 +11328,7 @@ PrsnSntncLngthMo,Imposed prison sentence length in months (minimum).,length (in 
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
-(2)CA113: AVAILABLE
-(3)CA113: AVAILABLE",1
+(3)NOT_AVAILABLE_YET",,1
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -11346,9 +11522,7 @@ JailSntncLngthDys,Imposed jail sentence length in days (minimum),length (in days
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
-(2)CA113: AVAILABLE
-(3)CA113: AVAILABLE",1
+(3)NOT_AVAILABLE_YET",,1
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -12019,7 +12193,9 @@ TmSrvdCrdt,Flag: defendant received time served credit towards sentence,whether 
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -12301,7 +12477,9 @@ DrvLscnRevSusp,Flag: sentence included revocation or suspension of driver's lice
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -12379,7 +12557,9 @@ RfrrdDrvSuspLscn,Flag: most serious charge referred to the prosecutor was drivin
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -12422,7 +12602,9 @@ ChrgdDrvSuspLscn,Flag: most serious charge filed by prosecutor was driving on su
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -12465,7 +12647,9 @@ CnvctdDrvSuspLscn,Flag: most serious charge for which defendant was convicted wa
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -12587,7 +12771,9 @@ Dprtn,Flag: defendant released to ICE custody for deportation proceedings,whethe
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -12955,7 +13141,9 @@ Rstttn,Flag: sentence included restitution,whether sentence included restitution
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -13153,7 +13341,9 @@ NotGltyInsanity,Flag: not guilty by reason of insanity,whether defendant was fou
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -13193,7 +13383,9 @@ IncmptntTrial,Flag: defendant was deemed incompetent to stand trial,whether defe
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -13232,7 +13424,9 @@ HabitualOffndrFlag,Flag: Habitual Offender,whether defendant was classified as a
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -13311,7 +13505,9 @@ MltplVctms,Flag: Incident involved multiple victims,incident involved multiple v
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-999,Not known/Missing,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -13349,9 +13545,7 @@ VctmSex,Victim's sex,victim's sex,,Numeric integer,0,Male,Court/Prosecutor/Jail/
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
-(2)CA113: AVAILABLE
-(3)CA113: AVAILABLE",1
+(3)NOT_AVAILABLE_YET",,1
 ,,,,,1,Female,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,2,Other,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,3,Multiple victims,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -13392,9 +13586,7 @@ VctmRace,Victim's race,victim's race,Victim Race,Numeric integer,0,White,Court/P
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
-(2)CA113: AVAILABLE
-(3)CA113: AVAILABLE",1
+(3)NOT_AVAILABLE_YET",,1
 ,,,,,1,African American,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,2,Hispanic/Latino,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,3,American Indian or Alaskan,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -13477,9 +13669,7 @@ VctmAgeGroups,Victim's age group at time of incident,victim's age at time of inc
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
-(2)CA113: AVAILABLE
-(3)CA113: AVAILABLE",1
+(3)NOT_AVAILABLE_YET",,1
 ,,,,,1,18 to 25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,2,26 to 35,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,3,36 to 45,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -13609,9 +13799,7 @@ VctmDfndntRltnshp,Victim-defendant relationship,victim-defendant relationship,,N
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
-(2)CA113: AVAILABLE
-(3)CA113: AVAILABLE",1
+(3)NOT_AVAILABLE_YET",,1
 ,,,,,2,Family member,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,3,Known non-family member,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,4,Stranger,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -13738,7 +13926,9 @@ PrbtnVltn,Flag: defendant violated conditions of probation sentence,whether defe
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,0
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",0
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -14170,9 +14360,7 @@ CVCFlag,Flag: defendant convicted of a concurrent violent case,whether defendant
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
-(2)CA113: AVAILABLE
-(3)CA113: AVAILABLE",1
+(3)NOT_AVAILABLE_YET",,1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -14211,9 +14399,7 @@ ReArrstFlag,Flag: defendant rearrested within three years of completing their se
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
-(2)CA113: AVAILABLE
-(3)CA113: AVAILABLE",1
+(3)NOT_AVAILABLE_YET",,1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -14252,7 +14438,9 @@ RcnvctnFlag,Flag: defendant reconvicted within three years of sentence,whether d
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -14291,9 +14479,7 @@ ReCnvctnSntncFlag,Flag: ?????,?????,New Conviction(s),Numeric integer,0,No,Court
 (2)NOT_AVAILABLE_YET
 (3)NOT_AVAILABLE_YET",,"(1)NOT_AVAILABLE_YET
 (2)NOT_AVAILABLE_YET
-(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
-(2)CA113: AVAILABLE
-(3)CA113: AVAILABLE",1
+(3)NOT_AVAILABLE_YET",,1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -14373,7 +14559,9 @@ VlntPriorsFlag,Flag: defendant convicted of violent offense within three years p
 (2)AVAILABLE
 (3)AVAILABLE",,"(1)AVAILABLE
 (2)AVAILABLE
-(3)NOT_AVAILABLE_YET",,1
+(3)NOT_AVAILABLE_YET","(1)CA113: AVAILABLE
+(2)CA113: AVAILABLE
+(3)CA113: AVAILABLE",1
 ,,,,,1,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-777,Variable not available in county,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,-888,Not applicable,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
