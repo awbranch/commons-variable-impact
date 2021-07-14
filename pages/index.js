@@ -51,7 +51,7 @@ export default function Home({ variables, sections }) {
     <div>
       <Head>
         <title>Commons Variable Impact Analyzer</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/favicon.png' />
       </Head>
 
       <main>
